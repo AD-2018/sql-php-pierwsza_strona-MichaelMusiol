@@ -11,7 +11,7 @@ echo("<h3>ZAD.1</h3>");
 $result = mysqli_query($conn, $sql);
 
 echo('<table border="1" class="tabela"');
-echo ("<tr><th>id_pracownicy</th><th>imie</th><th>dzial</th><th>zarobki</th></tr>");
+echo ("<tr><th>id_pracownicy</th><th>imie</th><th>dzial</th><th>zarobki</th><th>data_urodzenia</th></tr>");
 while($row=mysqli_fetch_assoc($result)){
 echo("<tr>");
     echo("<tr>");
