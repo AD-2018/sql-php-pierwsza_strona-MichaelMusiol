@@ -1,15 +1,4 @@
 <?php
-$servername = "sql7.freemysqlhosting.net";
-$username ="sql7373397";
-$password = "XKvMFd58NH";
-$dbname = "sql7373397";
-
-$conn= new mysqli($servername,$username,$password,$dbname);
-
-if($conn->connect_error){
-    die("Connection failed: " . $conn->connect_error);
-}
-
 $sql ="select * from pracownicy";
 echo("<h3>ZAD.1</h3>");
 $result = mysqli_query($conn, $sql);
