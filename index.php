@@ -1,4 +1,5 @@
 <?php
+require_once('lib.php');
 $sql ="select * from pracownicy";
 echo("<h3>ZAD.1</h3>");
 $result = mysqli_query($conn, $sql);
