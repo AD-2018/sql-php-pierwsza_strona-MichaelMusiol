@@ -7,7 +7,7 @@
     <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-MichaelMusiol">Github</a>
     <div>
        <a href="orgPracownicy.php">organizacjaPracownicy.php</a><br/>
-       <a href="funkcAgregujace.php">funkcjeAgrgujace.php</a><br/>
+       <a href="funkcAgregujace.php">funkcjeAgregujace.php</a><br/>
     </div>
 <?php
 echo("<h1>Michael Musiol nr. 8</h1>");
