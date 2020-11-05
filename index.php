@@ -8,7 +8,7 @@
 <?php
 echo("<h1>Michael Musiol nr. 8</h1>");
 
-require_once "connect.php";
+require_once "lib.php";
 
 $sql = "SELECT * FROM pracownicy";
 echo("<h3>ZADANIE 1</h3>");
