@@ -5,12 +5,10 @@
 </head>
 <body>
     
-    <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-MichaelMusiol">GŁÓWNA</a>
-    
     <div class="nav">
+         <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-MichaelMusiol">Github</a>
          <a href="index.php">Start</a>   
-         <a href="organizacjaPracownicy.php">Pracownicy i Organizacja</a>   
-         <a href="funkcjeAgregujace.php">Funkcje Agregujace</a>   
+         <a href="organizacjaPracownicy.php">Pracownicy i Organizacja</a>      
     </div>
   
 </body>
