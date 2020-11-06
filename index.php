@@ -4,10 +4,10 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-MichaelMusiol">Github</a>
     <div>
-       <a href="organizacjaPracownicy.php">organizacjaPracownicy.php</a><br/>
-       <a href="funkcjeAgregujace.php">funkcjeAgregujace.php</a><br/>
+       <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-MichaelMusiol  ">Github</a>
+       <a href="organizacjaPracownicy.php  ">organizacjaPracownicy.php</a>
+       <a href="funkcjeAgregujace.php  ">funkcjeAgregujace.php</a>
     </div>
 <?php
 echo("<h1>Michael Musiol nr. 8</h1>");
