@@ -26,15 +26,37 @@ if ( $result) {
     }
 
 echo('<table border="1">');
-    echo('<th>Imie</th><th>zarobki</th><th>Dzial</th>');
+    echo('<th>id</th><th>Imie</th><th>zarobki</th><th>Dzial</th>');
 
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo('<td>'.$row['imie'].'</td><td>'.$row['zarobki'].'</td><td>'.$row['dzial'].'</td>');
+        echo('<td>'.$row['id'].'</td><td>'.$row['imie'].'</td><td>'.$row['zarobki'].'</td><td>'.$row['dzial'].'</td>');
         echo('</tr>');
     }
 
     echo('</table>');
+
+    echo("<br/><h3>Zad.2</h3><br/>");
+    $sql = "SELECT * FROM pracownicy where dzial=2 or dzial=3";
+    echo($sql);
+    
+    $result = mysqli_query($conn, $sql);
+    if ( $result) {
+            echo("<li>ok");
+        } else {
+          echo("Error: ".$sql."<br>". mysqli_error($conn));
+        }
+    
+    echo('<table border="1">');
+        echo('<th>Imie</th><th>zarobki</th><th>Dzial</th>');
+    
+        while($row=mysqli_fetch_assoc($result)){
+            echo('<tr>');
+            echo('<td>'.$row['id'].'</td><td>'.$row['imie'].'</td><td>'.$row['zarobki'].'</td><td>'.$row['dzial'].'</td>');
+            echo('</tr>');
+        }
+    
+        echo('</table>');
         ?>
 
 </body>
