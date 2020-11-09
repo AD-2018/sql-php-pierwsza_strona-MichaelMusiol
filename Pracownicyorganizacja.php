@@ -87,7 +87,7 @@ echo("<h2>Sortowanie</h2>");
     
     
    
-$sql ="select * from pracownicy,organizacja where id_org=dzial order by name DESC ";
+$sql ="select * from pracownicy,organizacja where id_org=dzial order by imie DESC ";
 echo("<h3>zad.1</h3>");
 echo("<h4>$sql</h4>");
 $result = mysqli_query($conn, $sql);
@@ -104,7 +104,7 @@ echo("</tr>");
 echo('</table>');
     
     
-$sql ="select * from pracownicy,organizacja where id_org=dzial and dzial=3 order by name ASC ";
+$sql ="select * from pracownicy,organizacja where id_org=dzial and dzial=3 order by imie ASC ";
 echo("<h3>zad.2</h3>");
 echo("<h4>$sql</h4>");
 $result = mysqli_query($conn, $sql);
@@ -122,7 +122,7 @@ echo('</table>');
     
     
     
-$sql ="select * from pracownicy,organizacja where id_org=dzial and imie like'%a' order by name ASC ";
+$sql ="select * from pracownicy,organizacja where id_org=dzial and imie like'%a' order by imie ASC ";
 echo("<h3>zad.3</h3>");
 echo("<h4>$sql</h4>");
 $result = mysqli_query($conn, $sql);
@@ -155,7 +155,7 @@ echo("</tr>");
 echo('</table>');
     
     
-$sql ="select * from pracownicy,organizacja where id_org=dzial and imie not like'%a' order by zarobki ASC, zarobki ASC ";
+$sql ="select * from pracownicy,organizacja where id_org=dzial and imie not like'%a' order by dzial ASC, zarobki ASC ";
 echo("<h3>zad.5</h3>");
 echo("<h4>$sql</h4>");
 $result = mysqli_query($conn, $sql);
