@@ -39,51 +39,7 @@ echo('<table border="1">');
     echo('</table>');
     
     
-echo("<h3>Zad.2</h3><br/>");
-$sql = "SELECT sum(zarobki) as "Suma_zarobków_kobiet" FROM pracownicy where imie like'%a'";
-echo($sql);
 
-$result = mysqli_query($conn, $sql);
-if ( $result) {
-        echo("<li>ok");
-    } else {
-      echo("Error: ".$sql."<br>". mysqli_error($conn));
-    }
-
-echo('<table border="1">');
-    echo('<th>Suma zarobków kobiet</th>');
-
-    while($row=mysqli_fetch_assoc($result)){
-        echo('<tr>');
-        echo('<td>'.$row['Suma_zarobków_kobiet'].'</td>');
-        echo('</tr>');
-    }
-
-    echo('</table>');
-    
-    
-echo("<h3>Zad.3</h3><br/>");
-$sql = "SELECT sum(zarobki) as "Suma_zarobków_kobiet" FROM pracownicy where imie not like'%a' and (dzial=2 or dzial=3)";
-echo($sql);
-
-$result = mysqli_query($conn, $sql);
-if ( $result) {
-        echo("<li>ok");
-    } else {
-      echo("Error: ".$sql."<br>". mysqli_error($conn));
-    }
-
-echo('<table border="1">');
-    echo('<th>Suma zarobków kobiet</th>');
-
-    while($row=mysqli_fetch_assoc($result)){
-        echo('<tr>');
-        echo('<td>'.$row['dzial'].'</td><td>'.$row['Suma_zarobków_kobiet'].'</td>');
-        echo('</tr>');
-    }
-
-    echo('</table>');
-    
 ?>
 </body>
 </html>
