@@ -122,7 +122,7 @@ if ( $result) {
     }
 
 echo('<table border="1">');
-    echo('<th>Srednia zarobkow mezczyzn</th>');
+    echo('<th>Srednia zarobkow</th>');
 
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
@@ -135,7 +135,7 @@ echo('<table border="1">');
     
     
 echo("<h3>Zad.6</h3><br/>");
-$sql = "SELECT avg(zarobki) as srednia FROM pracownicy where (dzial=1 or dzial=2)";
+$sql = "SELECT avg(zarobki) as srednia FROM pracownicy where imie not like '%a' and (dzial=1 or dzial=2)";
 echo($sql);
 
 $result = mysqli_query($conn, $sql);
@@ -204,7 +204,7 @@ echo('<table border="1">');
     
 echo('<h2>Group by</h2>');
 echo("<h3>Zad.1</h3><br/>");
-    $sql = "SELECT sum(zarobki) as suma FROM pracownicy,organizacja where dzial=id_org";
+    $sql = "SELECT sum(zarobki) as suma FROM pracownicy,organizacja where dzial=id_org group by dzial";
 echo($sql);
 
 $result = mysqli_query($conn, $sql);
@@ -215,11 +215,11 @@ if ( $result) {
     }
 
 echo('<table border="1">');
-    echo('<th>Ilosc pracownikow</th>');
+    echo('<th>Ilosc pracownikow</th><th>dzial</th><th>nazwa dzial</th>');
 
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo('<td>'.$row['nazwa_dzial'].'</td><td>'.$row['dzial'].'</td><td>'.$row['suma'].'</td>');
+        echo('<td>'.$row['suma'].'</td><td>'.$row['dzial'].'</td><td>'.$row['nazwa_dzial'].'</td>');
         echo('</tr>');
     }
 
