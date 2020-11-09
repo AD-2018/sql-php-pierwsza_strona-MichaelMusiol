@@ -15,7 +15,7 @@
     
     <?php
             echo("<br/><h3>Zad.1</h3><br/>");
-        $sql = "SELECT imie, dzial FROM pracownicy, organizacja WHERE dzial = id_org";
+        $sql = "SELECT * FROM pracownicy, organizacja WHERE dzial = id_org";
         echo($sql);
         
         $result = mysqli_query($conn, $sql);
