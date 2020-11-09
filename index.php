@@ -12,7 +12,7 @@
 
 <?php
 require_once("lib.php");
-echo("<h1>Michael Musiol nr. 8</h1>");
+echo("<h1>Michael Musiol nr.8</h1>");
 
 echo("<br/><h3>Zad.1</h3><br/>");
 $sql = "SELECT * FROM pracownicy where dzial=2";
