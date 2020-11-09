@@ -14,7 +14,7 @@
 require_once("lib.php");
 echo("<h1>Michael Musiol nr.8</h1>");
 
-echo("<br/><h3>Zad.1</h3><br/>");
+echo("<h3>Zad.1</h3><br/>");
 $sql = "SELECT * FROM pracownicy where dzial=2";
 echo($sql);
 
@@ -26,11 +26,11 @@ if ( $result) {
     }
 
 echo('<table border="1">');
-    echo('<th>id</th><th>Imie</th><th>zarobki</th><th>Dzial</th>');
+    echo('<th>id</th><th>Imie</th><th>zarobki</th><th>dzial</th><th>data_urodzenia</th>');
 
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo('<td>'.$row['imie'].'</td><td>'.$row['zarobki'].'</td><td>'.$row['dzial'].'</td>');
+        echo('<td>'.$row['id_pracownicy'].'</td><td>'.$row['imie'].'</td><td>'.$row['dzial'].'</td><td>'.$row['zarobki'].'</td><td>'.$row['data_urodzenia'].'</td>');
         echo('</tr>');
     }
 
@@ -48,11 +48,11 @@ echo('<table border="1">');
         }
     
     echo('<table border="1">');
-        echo('<th>Imie</th><th>zarobki</th><th>Dzial</th>');
+        echo('<th>id</th><th>Imie</th><th>zarobki</th><th>dzial</th><th>data_urodzenia</th>');
     
         while($row=mysqli_fetch_assoc($result)){
             echo('<tr>');
-            echo('<td>'.$row['id'].'</td><td>'.$row['imie'].'</td><td>'.$row['zarobki'].'</td><td>'.$row['dzial'].'</td>');
+            echo('<td>'.$row['id_pracownicy'].'</td><td>'.$row['imie'].'</td><td>'.$row['dzial'].'</td><td>'.$row['zarobki'].'</td><td>'.$row['data_urodzenia'].'</td>');
             echo('</tr>');
         }
     
@@ -61,3 +61,4 @@ echo('<table border="1">');
 
 </body>
 </html>
+
