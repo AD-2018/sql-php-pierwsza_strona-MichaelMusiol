@@ -17,7 +17,7 @@ require_once("lib.php");
 echo("<h1>Michael Musiol nr.8</h1>");
 
 echo("<h3>Zad.1</h3><br/>");
-$sql = "SELECT sum(zarobki) as "Suma_zarobkow" FROM pracownicy";
+$sql = "SELECT * FROM pracownicy";
 echo($sql);
 
 $result = mysqli_query($conn, $sql);
@@ -28,11 +28,11 @@ if ( $result) {
     }
 
 echo('<table border="1">');
-    echo('<th>Suma Zarobków</th>');
+    echo('<th>id</th>');
 
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo('<td>'.$row['Suma_zarobkow'].'</td>');
+        echo('<td>'.$row['id'].'</td>');
         echo('</tr>');
     }
 
