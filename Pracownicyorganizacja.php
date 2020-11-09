@@ -33,7 +33,7 @@ echo('</table>');
     
     
 $sql ="select * from pracownicy,organizacja where id_org=dzial and (dzial=1 or dzial=4)";
-echo("<h3>zad.1</h3>");
+echo("<h3>zad.2</h3>");
 echo("<h4>$sql</h4>");
 $result = mysqli_query($conn, $sql);
 
@@ -50,7 +50,7 @@ echo('</table>');
     
     
 $sql ="select * from pracownicy,organizacja where id_org=dzial and imie like '%a' ";
-echo("<h3>zad.1</h3>");
+echo("<h3>zad.3</h3>");
 echo("<h4>$sql</h4>");
 $result = mysqli_query($conn, $sql);
 
@@ -67,7 +67,7 @@ echo('</table>');
     
     
 $sql ="select * from pracownicy,organizacja where id_org=dzial and imie not like '%a' ";
-echo("<h3>zad.1</h3>");
+echo("<h3>zad.4</h3>");
 echo("<h4>$sql</h4>");
 $result = mysqli_query($conn, $sql);
 
