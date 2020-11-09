@@ -14,12 +14,7 @@
     </div>
     
 <?php
-$servername = "sql7.freemysqlhosting.net";
-$username = "sql7374842";
-$password = "4w2p5Zi8PR";
-$dbname = "sql7374842";
-$conn= new mysqli($servername,$username,$password,$dbname);
-    
+require_once("lib.php");
 $sql ="select * from pracownicy,organizacja where id_org=dzial";
 echo("<h3>zad.1</h3>");
 echo("<h4>$sql</h4>");
@@ -30,7 +25,7 @@ echo ("<tr><th>id_pracownicy</th><th>imie</th><th>dzial</th><th>zarobki</th><th>
 while($row=mysqli_fetch_assoc($result)){
 echo("<tr>");
     echo("<tr>");
-    echo("<td>".$row['id_pracownicy']."</td><td>".$row['imie']."</td><td>".$row['dzial']."</td><td>".$row['zarobki']."</td><td>".$row['data_urodzenia']."</td><td>".$row['id_org']."</td><td>".$row['nazwa_dzial']."</td>");
+    echo("<td>".$row['id_pracownicy']."</td><td>".$row['imie']."</td><td>".$row['dzial']."</td><td>".$row['nazwa_dzial']."</td><td>".$row['zarobki']."</td><td>".$row['data_urodzenia']."</td>");
     echo("<tr>");
 echo("</tr>");
 }
