@@ -16,6 +16,7 @@
 <?php
 require_once("lib.php");
 $sql ="select * from pracownicy,organizacja where id_org=dzial";
+echo("<h1>Pracownicy i Organizacja</h1>");
 echo("<h3>zad.1</h3>");
 echo("<h4>$sql</h4>");
 $result = mysqli_query($conn, $sql);
@@ -208,7 +209,7 @@ echo("</tr>");
 echo('</table>');
     
     
-$sql ="select * from pracownicy,organizacja where id_org=dzial sort by data_urodzenia limit 1 ";
+$sql ="select * from pracownicy,organizacja where id_org=dzial order by data_urodzenia limit 1 ";
 echo("<h3>zad.3</h3>");
 echo("<h4>$sql</h4>");
 $result = mysqli_query($conn, $sql);
