@@ -14,12 +14,7 @@
     </div>
     
     <?php
-    $servername = "sql7.freemysqlhosting.net";
-$username = "sql7374842";
-$password = "4w2p5Zi8PR";
-$dbname = "sql7374842";
-   $conn= new mysqli($servername,$username,$password,$dbname);
-    
+   
 $sql ="select * from pracownicy,organizacja where id_org=dzial";
 echo("<h3>zad.1</h3>");
 echo("<h4>$sql</h4>");
