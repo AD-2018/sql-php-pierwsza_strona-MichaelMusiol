@@ -28,7 +28,7 @@ if ( $result) {
     }
 
 echo('<table border="1">');
-    echo('<th>Suma zarobków</th>');
+    echo('<th>Suma zarobkow</th>');
 
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
@@ -51,7 +51,7 @@ if ( $result) {
     }
 
 echo('<table border="1">');
-    echo('<th>Suma zarobków kobiet</th>');
+    echo('<th>Suma zarobkow kobiet</th>');
 
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
@@ -74,7 +74,7 @@ if ( $result) {
     }
 
 echo('<table border="1">');
-    echo('<th>Suma zarobków meżczyzn</th>');
+    echo('<th>Suma zarobkow mezczyzn</th>');
 
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
@@ -98,7 +98,7 @@ if ( $result) {
     }
 
 echo('<table border="1">');
-    echo('<th>Średnia zarobków meżczyzn</th>');
+    echo('<th>Srednia zarobkow mezczyzn</th>');
 
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
@@ -122,7 +122,7 @@ if ( $result) {
     }
 
 echo('<table border="1">');
-    echo('<th>Średnia zarobków meżczyzn</th>');
+    echo('<th>Srednia zarobkow mezczyzn</th>');
 
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
@@ -146,7 +146,7 @@ if ( $result) {
     }
 
 echo('<table border="1">');
-    echo('<th>Średnia zarobków meżczyzn</th>');
+    echo('<th>Srednia_zarobkow</th>');
 
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
@@ -168,7 +168,7 @@ if ( $result) {
     }
 
 echo('<table border="1">');
-    echo('<th>Ilość pracowników</th>');
+    echo('<th>Ilosc_pracownikow</th>');
 
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
@@ -181,7 +181,7 @@ echo('<table border="1">');
     
     
 echo("<h3>Zad.8</h3><br/>");
-$sql = "SELECT count(imie) as liczba FROM pracownicy where imie like'%a' (dzial=1 or dzial=3)";
+$sql = "SELECT count(imie) as liczba FROM pracownicy where imie like'%a' and (dzial=1 or dzial=3)";
 echo($sql);
 
 $result = mysqli_query($conn, $sql);
@@ -192,7 +192,7 @@ if ( $result) {
     }
 
 echo('<table border="1">');
-    echo('<th>Ilość pracowników</th>');
+    echo('<th>Ilosc_kobiet_w_dzialach_1_3</th>');
 
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
@@ -204,7 +204,7 @@ echo('<table border="1">');
     
 echo('<h2>Group by</h2>');
 echo("<h3>Zad.1</h3><br/>");
-    $sql = "SELECT sum(zarobki) as suma FROM pracownicy, organizacja where dzial=id_org;
+    $sql = "SELECT sum(zarobki) as suma FROM pracownicy,organizacja where dzial=id_org";
 echo($sql);
 
 $result = mysqli_query($conn, $sql);
@@ -215,7 +215,7 @@ if ( $result) {
     }
 
 echo('<table border="1">');
-    echo('<th>Ilość pracowników</th>');
+    echo('<th>Ilosc pracownikow</th>');
 
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
