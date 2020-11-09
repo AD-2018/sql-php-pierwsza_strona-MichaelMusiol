@@ -35,7 +35,3 @@ echo('</table>');
   
 </body>
 </html>
-    ?>
-  
-</body>
-</html>
