@@ -4,11 +4,10 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="a">
-       <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-MichaelMusiol">Github</a>
-       <a href="Pracownicyorganizacja.php">organizacjaPracownicy.php</a>
-       <a href="funkcjeAgregujace.php">funkcjeAgregujace.php</a>
-    </div>
+    <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-MichaelMusiol">Github</a>
+    <a href="Pracownicyorganizacja.php">Organizacja Pracownicy</a>
+    <a href="funkcjeAgregujace.php">Funkcje Agregujace</a>
+    <a href="DataiCzas.php">Data i Czas</a>
     
 
 <?php
