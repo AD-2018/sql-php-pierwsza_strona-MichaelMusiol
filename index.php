@@ -55,7 +55,7 @@ body {
 require_once("lib.php");
 echo("<h1>Michael Musiol nr.8</h1>");
 
-echo("<h3>Zad.1</h3>");
+echo("<strong>Zad.1<strong>");
 $sql = "SELECT * FROM pracownicy where dzial=2";
 echo($sql);
 
@@ -77,15 +77,15 @@ echo('<table border="1">');
 
     echo('</table>');
 
-    echo("<br/><h3>Zad.2</h3>");
+    echo("<br/>Zad.2</h3>");
     $sql = "SELECT * FROM pracownicy where dzial=2 or dzial=3";
     echo($sql);
     
     $result = mysqli_query($conn, $sql);
     if ( $result) {
-            echo("<li>ok");
+            echo("<li>ok<br/>");
         } else {
-          echo("Error: ".$sql."<br/><br/>". mysqli_error($conn));
+          echo("Error: ".$sql".<br/>. mysqli_error($conn));
         }
     
     echo('<table border="1">');
