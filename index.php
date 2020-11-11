@@ -1,7 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="style.css">
+<style>
+a {
+background-color: black;
+  box-shadow: 0 5px 0 red;
+  color: white;
+  padding: 1em 1.5em;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+a:hover {
+  background-color: red;
+}
+
+a:active {
+  box-shadow: none;
+  top: 5px;
+}
+
+/* Non-Demo Styles */
+body {
+    margin-top: 25px;
+    height: 100vh;
+}
+</style>
 </head>
 <body>
     <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-MichaelMusiol">Github</a>
