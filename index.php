@@ -2,6 +2,21 @@
 <html>
 <head>
 <style>
+  table {
+  border-collapse: collapse;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
 a {
 background-color: black;
   box-shadow: 0 5px 0 red;
