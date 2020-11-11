@@ -14,9 +14,9 @@ th {
   color: white;
 }
 
-.a {
-background-color: red;
-  box-shadow: 0 5px 0 darkred;
+a {
+background-color: black;
+  box-shadow: 0 5px 0 red;
   color: white;
   padding: 1em 1.5em;
   position: relative;
@@ -24,19 +24,17 @@ background-color: red;
   text-transform: uppercase;
 }
 
-.a:hover {
-  background-color: #ce0606;
+a:hover {
+  background-color: red;
 }
 
-.a:active {
+a:active {
   box-shadow: none;
   top: 5px;
 }
 
 /* Non-Demo Styles */
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+    margin-top: 25px;
+    height: 100vh;
 }
