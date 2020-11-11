@@ -2,7 +2,7 @@
 <html>
 <head>
 <style>
-  table {
+table {
   border-collapse: collapse;
 }
 
@@ -11,10 +11,12 @@ th, td {
   padding: 8px;
 }
 
-tr:nth-child(even){background-color: #f2f2f2}
+tr:nth-child(even){background-color: white}
+
+tr:nth-child(odd){background-color: red}
 
 th {
-  background-color: #4CAF50;
+  background-color: black;
   color: white;
 }
 a {
@@ -36,7 +38,6 @@ a:active {
   top: 5px;
 }
 
-/* Non-Demo Styles */
 body {
     margin-top: 25px;
     height: 100vh;
