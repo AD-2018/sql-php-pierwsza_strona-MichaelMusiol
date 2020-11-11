@@ -9,6 +9,8 @@
        <a href="Pracownicyorganizacja.php">organizacjaPracownicy.php</a>
        <a href="funkcjeAgregujace.php">funkcjeAgregujace.php</a>
     </div>
+    
+    <a href="#">Linky Boo</a>
 
 <?php
 require_once("lib.php");
