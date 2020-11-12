@@ -1,48 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-table {
-  border-collapse: collapse;
-}
-
-th, td {
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(even){background-color: white}
-
-tr:nth-child(odd){background-color: red}
-
-th {
-  background-color: black;
-  color: white;
-}
-a {
-background-color: black;
-  box-shadow: 0 5px 0 red;
-  color: white;
-  padding: 1em 1.5em;
-  position: relative;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-a:hover {
-  background-color: red;
-}
-
-a:active {
-  box-shadow: none;
-  top: 5px;
-}
-
-body {
-    margin-top: 25px;
-    height: 100vh;
-}
-</style>
+<link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 <body>
     <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-MichaelMusiol">Github</a>
