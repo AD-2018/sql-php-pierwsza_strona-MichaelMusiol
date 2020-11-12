@@ -226,7 +226,7 @@ echo('<table border="1">');
     
     
 echo("<h3>Zad.2</h3><br/>");
-    $sql = "SELECT count(imie) as liczba, dzial , nazwa_dzial FROM pracownicy,organizacja where dzial=id_org group by dzial";
+    $sql = "select count(imie) as liczba, dzial , nazwa_dzial from pracownicy,organizacja where dzial=id_org group by dzial";
 echo($sql);
 
 $result = mysqli_query($conn, $sql);
@@ -237,7 +237,7 @@ if ( $result) {
     }
 
 echo('<table border="1">');
-    echo('<th>Suma_zarobkow</th><th>dzial</th><th>nazwa dzial</th>');
+    echo('<th>Suma_pracownikow</th><th>dzial</th><th>nazwa dzial</th>');
 
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
@@ -272,7 +272,7 @@ echo('<table border="1">');
     
     
 echo("<h3>Zad.4</h3><br/>");
-    $sql = "SELECT sum(zarobki), if( (.......), 'men','kobiety') as 'plec' FROM `pracownicy` GROUP by (imie like '%a')";
+    $sql = "SELECT sum(zarobki) as SumaZarobki, if( (imie LIKE '%a'), 'Kobiety','Mężczyźni') as 'plec' from pracownicy group by plec";
 echo($sql);
 
 $result = mysqli_query($conn, $sql);
@@ -287,11 +287,128 @@ echo('<table border="1">');
 
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
+        echo('<td>'.$row['SumaZarobki'].'</td><td>'.$row['plec'].'</td>');
+        echo('</tr>');
+    }
+
+    echo('</table>');
+
+    
+echo("<h3>Zad.5</h3><br/>");
+    $sql = "SELECT avg(zarobki) as SredniaZarobki, if( (imie LIKE '%a'), 'Kobiety','Mężczyźni') as 'plec' from pracownicy group by plec";
+echo($sql);
+
+$result = mysqli_query($conn, $sql);
+if ( $result) {
+        echo("<li>ok");
+    } else {
+      echo("Error: ".$sql."<br>". mysqli_error($conn));
+    }
+
+echo('<table border="1">');
+    echo('<th>Srednia_zarobkow</th><th>dzial</th><th>nazwa dzial</th>');
+
+    while($row=mysqli_fetch_assoc($result)){
+        echo('<tr>');
+        echo('<td>'.$row['SredniaZarobki'].'</td><td>'.$row['plec'].'</td>');
+        echo('</tr>');
+    }
+
+    echo('</table>');
+    
+echo("<h2>klauzula having</h2><br/>");
+    
+echo("<h3>Zad.1</h3><br/>");
+    $sql = "SET sql_mode=(SELECT REPLACE(@@sql_mode, 'ONLY_FULL_GROUP_BY', ''))SELECT count(id_pracownicy),nazwa_dzial from pracownicy, organizacja WHERE dzial=id_org GROUP BY dzial HAVING count(id_pracownicy) > 1";
+echo($sql);
+
+$result = mysqli_query($conn, $sql);
+if ( $result) {
+        echo("<li>ok");
+    } else {
+      echo("Error: ".$sql."<br>". mysqli_error($conn));
+    }
+
+echo('<table border="1">');
+    echo('<th>Srednia_zarobkow</th><th>dzial</th><th>nazwa dzial</th>');
+
+    while($row=mysqli_fetch_assoc($result)){
+        echo('<tr>');
+        echo('<td>dziala</td>');
+        echo('</tr>');
+    }
+
+    echo('</table>');
+    
+    
+echo("<h3>Zad.2</h3><br/>");
+    $sql = "SELECT sum(zarobki) as Suma_Zarobkow,dzial,nazwa_dzial from pracownicy, organizacja group by dzial having Suma_Zarobkow < 28 ";
+echo($sql);
+
+$result = mysqli_query($conn, $sql);
+if ( $result) {
+        echo("<li>ok");
+    } else {
+      echo("Error: ".$sql."<br>". mysqli_error($conn));
+    }
+
+echo('<table border="1">');
+    echo('<th>Suma_Zarobkow</th><th>dzial</th><th>nazwa dzial</th>');
+
+    while($row=mysqli_fetch_assoc($result)){
+        echo('<tr>');
+        echo('<td>'.$row['Suma_Zarobkow'].'</td><td>'.$row['dzial'].'</td><td>'.$row['nazwa_dzial'].'</td>');
+        echo('</tr>');
+    }
+
+    echo('</table>');
+    
+    
+echo("<h3>Zad.3</h3><br/>");
+    $sql = "SELECT avg(zarobki) as srednia,dzial,nazwa_dzial from pracownicy, organizacja where imie not like '%a' group by dzial having srednia > 28 ";
+echo($sql);
+
+$result = mysqli_query($conn, $sql);
+if ( $result) {
+        echo("<li>ok");
+    } else {
+      echo("Error: ".$sql."<br>". mysqli_error($conn));
+    }
+
+echo('<table border="1">');
+    echo('<th>Srednia_zarobkow</th><th>dzial</th><th>nazwa dzial</th>');
+
+    while($row=mysqli_fetch_assoc($result)){
+        echo('<tr>');
         echo('<td>'.$row['srednia'].'</td><td>'.$row['dzial'].'</td><td>'.$row['nazwa_dzial'].'</td>');
         echo('</tr>');
     }
 
     echo('</table>');
+    
+    
+echo("<h3>Zad.4</h3><br/>");
+    $sql = "SELECT count(id_pracownicy) as ilosc,dzial,nazwa_dzial from pracownicy, organizacja where dzial=id_org group by dzial having ilosc > 3 ";
+echo($sql);
+
+$result = mysqli_query($conn, $sql);
+if ( $result) {
+        echo("<li>ok");
+    } else {
+      echo("Error: ".$sql."<br>". mysqli_error($conn));
+    }
+
+echo('<table border="1">');
+    echo('<th>Ilosc pracownikow</th><th>dzial</th><th>nazwa dzial</th>');
+
+    while($row=mysqli_fetch_assoc($result)){
+        echo('<tr>');
+        echo('<td>'.$row['ilosc'].'</td><td>'.$row['dzial'].'</td><td>'.$row['nazwa_dzial'].'</td>');
+        echo('</tr>');
+    }
+
+    echo('</table>')
+    
 ?>
 </body>
 </html>
