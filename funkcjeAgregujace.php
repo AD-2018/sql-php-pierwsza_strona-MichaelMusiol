@@ -317,28 +317,8 @@ echo('<table border="1">');
     echo('</table>');
     
 echo("<h2>klauzula having</h2><br/>");
-    
+       
 echo("<h3>Zad.1</h3><br/>");
-    $sql = "SET sql_mode=(SELECT REPLACE(@@sql_mode, 'ONLY_FULL_GROUP_BY', ''))SELECT count(imie) as liczba,nazwa_dzial from pracownicy, organizacja WHERE dzial=id_org GROUP BY dzial HAVING liczba > 1";
-echo($sql);
-
-$result = mysqli_query($conn, $sql);
-if ( $result) {
-        echo("<li>ok");
-    } else {
-      echo("Error: ".$sql."<br>". mysqli_error($conn));
-    }
-
-echo('<table border="1">');
-
-        echo('<tr>');
-        echo('<td>dziala</td>');
-        echo('</tr>');
-
-    echo('</table>');
-    
-    
-echo("<h3>Zad.2</h3><br/>");
     $sql = "select sum(zarobki) as Suma_Zarobkow, dzial , nazwa_dzial from pracownicy, organizacja group by dzial having Suma_Zarobkow < 28 ";
 echo($sql);
 
@@ -361,7 +341,7 @@ echo('<table border="1">');
     echo('</table>');
     
     
-echo("<h3>Zad.3</h3><br/>");
+echo("<h3>Zad.2</h3><br/>");
     $sql = "select avg(zarobki) as srednia,dzial,nazwa_dzial from pracownicy, organizacja where imie not like '%a' group by dzial having srednia > 30 ";
 echo($sql);
 
@@ -384,7 +364,7 @@ echo('<table border="1">');
     echo('</table>');
     
     
-echo("<h3>Zad.4</h3><br/>");
+echo("<h3>Zad.3</h3><br/>");
     $sql = "SELECT count(id_pracownicy) as ilosc,dzial,nazwa_dzial from pracownicy, organizacja where dzial=id_org group by dzial having ilosc > 3 ";
 echo($sql);
 
