@@ -36,7 +36,7 @@ echo('<table border="1">');
 
     echo('</table>');
 
-    echo("<br/>Zad.2</h3>");
+    echo("<br/><h3>Zad.2</h3><br/>");
     $sql = "SELECT * FROM pracownicy where dzial=2 or dzial=3";
     echo($sql);
     
