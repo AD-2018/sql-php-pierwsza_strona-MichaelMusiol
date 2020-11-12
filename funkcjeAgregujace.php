@@ -6,12 +6,10 @@
 <body>
 
     <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-MichaelMusiol">Github</a>
+    <a href="Pracownicyorganizacja.php">Organizacja Pracownicy</a>
+    <a href="funkcjeAgregujace.php">Funkcje Agregujace</a>
+    <a href="DataiCzas.php">Data i Czas</a>
     
-    <div class="nav">
-         <a href="index.php">Pracownicy</a>
-         <a href="Pracownicyorganizacja.php">Pracownicy i Organizacja</a>
-         <a href="funkcjeAgregujace.php">Funkcje Agregujace</a>   
-    </div>
 <?php
 require_once("lib.php");
 echo("<h1>Michael Musiol nr.8</h1>");
