@@ -72,18 +72,18 @@ if ( $result) {
     }
 
 echo('<table border="1">');
-    echo('<th>id</th><th>imie</th><th>zarobki</th><th>dzial</th><th>data urodzenia</th>');
+    echo('<th>Suma lat</th>');
 
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo('<td>'.$row['id_pracownicy'].'</td><td>'.$row['imie'].'</td><td>'.$row['zarobki'].'</td><td>'.$row['dzial'].'</td><td>'.$row['data_urodzenia'].'</td>');
+        echo('<td>'.$row['SumaLat'].'</td>');
         echo('</tr>');
     }
 
     echo('</table>');
     
  echo("<h3>Zad.4</h3>");
-$sql = "SELECT SUM(YEAR(CURDATE()) - YEAR(data_urodzenia)) as Suma from pracownicy,organizacja WHERE id_org=dzial and nazwa_dzial='handel'";
+$sql = "select sum(year(curdate()) - year(data_urodzenia)) as Suma,* from pracownicy,organizacja where id_org=dzial and nazwa_dzial='handel'";
 echo($sql);
 
 $result = mysqli_query($conn, $sql);
@@ -94,11 +94,11 @@ if ( $result) {
     }
 
 echo('<table border="1">');
-    echo('<th>id</th><th>imie</th><th>zarobki</th><th>dzial</th><th>data urodzenia</th>');
+    echo('<th>Suma lat</th>');
 
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo('<td>'.$row['id_pracownicy'].'</td><td>'.$row['imie'].'</td><td>'.$row['zarobki'].'</td><td>'.$row['dzial'].'</td><td>'.$row['data_urodzenia'].'</td>');
+        echo('<td>'.$row['Suma'].'</td>');
         echo('</tr>');
     }
 
@@ -106,7 +106,7 @@ echo('<table border="1">');
     
     
  echo("<h3>Zad.5</h3>");
-$sql = "SELECT SUM(YEAR(CURDATE()) - YEAR(data_urodzenia)) as SumaWiekuKobiet from pracownicy WHERE imie LIKE '%a'";
+$sql = "select sum(year(curdate()) - year(data_urodzenia)) as SumaLatKobiet from pracownicy where imie like '%a'";
 echo($sql);
 
 $result = mysqli_query($conn, $sql);
@@ -117,11 +117,11 @@ if ( $result) {
     }
 
 echo('<table border="1">');
-    echo('<th>id</th><th>imie</th><th>zarobki</th><th>dzial</th><th>data urodzenia</th>');
+    echo('<th>Suma lat kobiet</th><th>imie</th><th>zarobki</th><th>dzial</th><th>data urodzenia</th>');
 
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo('<td>'.$row['id_pracownicy'].'</td><td>'.$row['imie'].'</td><td>'.$row['zarobki'].'</td><td>'.$row['dzial'].'</td><td>'.$row['data_urodzenia'].'</td>');
+        echo('<td>'.$row['SumaLatKobiet'].'</td>');
         echo('</tr>');
     }
 
@@ -129,7 +129,7 @@ echo('<table border="1">');
     
     
  echo("<h3>Zad.6</h3>");
-$sql = "SELECT SUM(YEAR(CURDATE()) - YEAR(data_urodzenia)) as SumaWiekuMezczyzn from pracownicy WHERE imie NOT LIKE '%a'";
+$sql = "select sum(year(curdate()) - year(data_urodzenia)) as SumaLatMezczyzn from pracownicy where imie not like '%a'";
 echo($sql);
 
 $result = mysqli_query($conn, $sql);
@@ -140,18 +140,18 @@ if ( $result) {
     }
 
 echo('<table border="1">');
-    echo('<th>id</th><th>imie</th><th>zarobki</th><th>dzial</th><th>data urodzenia</th>');
+    echo('<th>Suma lat mezczyzn</th><th>imie</th><th>zarobki</th><th>dzial</th><th>data urodzenia</th>');
 
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo('<td>'.$row['id_pracownicy'].'</td><td>'.$row['imie'].'</td><td>'.$row['zarobki'].'</td><td>'.$row['dzial'].'</td><td>'.$row['data_urodzenia'].'</td>');
+        echo('<td>'.$row['SumaLatMezczyzn'].'</td>');
         echo('</tr>');
     }
 
     echo('</table>');
     
  echo("<h3>Zad.7</h3>");
-$sql = "SELECT AVG(YEAR(CURDATE()) - YEAR(data_urodzenia)) as SredniaWieku, nazwa_dzial from pracownicy,organizacja WHERE id_org=dzial GROUP BY dzial";
+$sql = "select avg(year(curdate()) - year(data_urodzenia)) as SredniaWieku, nazwa_dzial from pracownicy,organizacja where id_org=dzial group by dzial";
 echo($sql);
 
 $result = mysqli_query($conn, $sql);
@@ -162,11 +162,11 @@ if ( $result) {
     }
 
 echo('<table border="1">');
-    echo('<th>id</th><th>imie</th><th>zarobki</th><th>dzial</th><th>data urodzenia</th>');
+    echo('<th>Srednia wieku</th><th>nazwa dzial</th>');
 
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo('<td>'.$row['id_pracownicy'].'</td><td>'.$row['imie'].'</td><td>'.$row['zarobki'].'</td><td>'.$row['dzial'].'</td><td>'.$row['data_urodzenia'].'</td>');
+        echo('<td>'.$row['SredniaWieku'].'</td><td>'.$row['nazwa_dzial'].'</td>');
         echo('</tr>');
     }
 
@@ -174,7 +174,7 @@ echo('<table border="1">');
 
     
  echo("<h3>Zad.8</h3>");
-$sql = "SELECT SUM(YEAR(CURDATE()) - YEAR(data_urodzenia)) as SumaWieku, nazwa_dzial from pracownicy,organizacja WHERE id_org=dzial GROUP BY dzial";
+$sql = "select sum(year(curdate()) - year(data_urodzenia)) as SumaLat, nazwa_dzial from pracownicy,organizacja where id_org=dzial group by dzial";
 echo($sql);
 
 $result = mysqli_query($conn, $sql);
@@ -185,18 +185,18 @@ if ( $result) {
     }
 
 echo('<table border="1">');
-    echo('<th>id</th><th>imie</th><th>zarobki</th><th>dzial</th><th>data urodzenia</th>');
+    echo('<th>Suma Lat</th><th>nazwa dzial</th>');
 
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo('<td>'.$row['id_pracownicy'].'</td><td>'.$row['imie'].'</td><td>'.$row['zarobki'].'</td><td>'.$row['dzial'].'</td><td>'.$row['data_urodzenia'].'</td>');
+        echo('<td>'.$row['SumaLat'].'</td><td>'.$row['nazwa_dzial'].'</td>');
         echo('</tr>');
     }
 
     echo('</table>');
     
  echo("<h3>Zad.9</h3>");
-$sql = "SELECT SUM(YEAR(CURDATE()) - YEAR(data_urodzenia)) as SumaWieku, nazwa_dzial from pracownicy,organizacja WHERE id_org=dzial GROUP BY dzial";
+$sql = "select sum(year(curdate()) - year(data_urodzenia)) as Sumalat, nazwa_dzial from pracownicy,organizacja WHERE id_org=dzial GROUP BY dzial";
 echo($sql);
 
 $result = mysqli_query($conn, $sql);
@@ -207,11 +207,11 @@ if ( $result) {
     }
 
 echo('<table border="1">');
-    echo('<th>id</th><th>imie</th><th>zarobki</th><th>dzial</th><th>data urodzenia</th>');
+    echo('<th>Suma lat</th><th>nazwa dzial</th>');
 
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo('<td>'.$row['id_pracownicy'].'</td><td>'.$row['imie'].'</td><td>'.$row['zarobki'].'</td><td>'.$row['dzial'].'</td><td>'.$row['data_urodzenia'].'</td>');
+        echo('<td>'.$row['Sumalat'].'</td><td>'.$row['nazwa_dzial'].'</td>');
         echo('</tr>');
     }
 
@@ -219,7 +219,7 @@ echo('<table border="1">');
     
     
  echo("<h3>Zad.10</h3>");
-$sql = "SELECT SUM(YEAR(CURDATE()) - YEAR(data_urodzenia)) as SumaWieku, nazwa_dzial from pracownicy,organizacja WHERE id_org=dzial GROUP BY dzial";
+$sql = "select sum(year(curdate()) - year(data_urodzenia)) as SumaLat, nazwa_dzial from pracownicy,organizacja where id_org=dzial group by dzial";
 echo($sql);
 
 $result = mysqli_query($conn, $sql);
@@ -230,11 +230,11 @@ if ( $result) {
     }
 
 echo('<table border="1">');
-    echo('<th>id</th><th>imie</th><th>zarobki</th><th>dzial</th><th>data urodzenia</th>');
+    echo('<th>Suma lat</th><th>nazwa dzial</th>');
 
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo('<td>'.$row['id_pracownicy'].'</td><td>'.$row['imie'].'</td><td>'.$row['zarobki'].'</td><td>'.$row['dzial'].'</td><td>'.$row['data_urodzenia'].'</td>');
+        echo('<td>'.$row['SumaLat'].'</td><td>'.$row['nazwa_dzial'].'</td>');
         echo('</tr>');
     }
 
@@ -242,7 +242,7 @@ echo('<table border="1">');
     
     
  echo("<h3>Zad.11</h3>");
-$sql = "SELECT SUM(YEAR(CURDATE()) - YEAR(data_urodzenia)) as SumaWieku, nazwa_dzial from pracownicy,organizacja WHERE id_org=dzial GROUP BY dzial";
+$sql = "select sum(year(curdate()) - year(data_urodzenia)) as SumaWieku, nazwa_dzial from pracownicy,organizacja where id_org=dzial group by dzial";
 echo($sql);
 
 $result = mysqli_query($conn, $sql);
@@ -253,11 +253,11 @@ if ( $result) {
     }
 
 echo('<table border="1">');
-    echo('<th>id</th><th>imie</th><th>zarobki</th><th>dzial</th><th>data urodzenia</th>');
+    echo('<th>Suma wieku</th><th>nazwa dzial</th><th>zarobki</th><th>dzial</th><th>data urodzenia</th>');
 
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo('<td>'.$row['id_pracownicy'].'</td><td>'.$row['imie'].'</td><td>'.$row['zarobki'].'</td><td>'.$row['dzial'].'</td><td>'.$row['data_urodzenia'].'</td>');
+        echo('<td>'.$row['SumaWieku'].'</td><td>'.$row['nazwa_dzial'].'</td>');
         echo('</tr>');
     }
 
@@ -265,7 +265,7 @@ echo('<table border="1">');
     
     
   echo("<h3>Zad.12</h3>");
-$sql = "SELECT SUM(YEAR(CURDATE()) - YEAR(data_urodzenia)) as SumaWieku, nazwa_dzial from pracownicy,organizacja WHERE id_org=dzial GROUP BY dzial";
+$sql = "select sum(year(curdate()) - year(data_urodzenia)) as SumaWieku, nazwa_dzial from pracownicy,organizacja where id_org=dzial GROUP BY dzial";
 echo($sql);
 
 $result = mysqli_query($conn, $sql);
