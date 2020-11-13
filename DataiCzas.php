@@ -117,7 +117,7 @@ if ( $result) {
     }
 
 echo('<table border="1">');
-    echo('<th>Suma lat kobiet</th><th>imie</th><th>zarobki</th><th>dzial</th><th>data urodzenia</th>');
+    echo('<th>Suma lat kobiet</th>');
 
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
@@ -140,7 +140,7 @@ if ( $result) {
     }
 
 echo('<table border="1">');
-    echo('<th>Suma lat mezczyzn</th><th>imie</th><th>zarobki</th><th>dzial</th><th>data urodzenia</th>');
+    echo('<th>Suma lat mezczyzn</th>');
 
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
@@ -196,7 +196,7 @@ echo('<table border="1">');
     echo('</table>');
     
  echo("<h3>Zad.9</h3>");
-$sql = "select sum(year(curdate()) - year(data_urodzenia)) as Sumalat, nazwa_dzial from pracownicy,organizacja WHERE id_org=dzial GROUP BY dzial";
+$sql = "SELECT MAX(YEAR(CURDATE()) - YEAR(data_urodzenia)) as Wiek, nazwa_dzial from pracownicy,organizacja WHERE id_org=dzial GROUP BY dzial;";
 echo($sql);
 
 $result = mysqli_query($conn, $sql);
@@ -207,11 +207,11 @@ if ( $result) {
     }
 
 echo('<table border="1">');
-    echo('<th>Suma lat</th><th>nazwa dzial</th>');
+    echo('<th>nazwa dzial</th><th>wiek</th>');
 
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo('<td>'.$row['Sumalat'].'</td><td>'.$row['nazwa_dzial'].'</td>');
+        echo('<td>'.$row['nazwa_dzial'].'</td><td>'.$row['Wiek'].'</td>');
         echo('</tr>');
     }
 
@@ -242,7 +242,7 @@ echo('<table border="1">');
     
     
  echo("<h3>Zad.11</h3>");
-$sql = "select sum(year(curdate()) - year(data_urodzenia)) as SumaWieku, nazwa_dzial from pracownicy,organizacja where id_org=dzial group by dzial";
+$sql = "SELECT MIN(YEAR(CURDATE()) - YEAR(data_urodzenia)) as min, nazwa_dzial from pracownicy,organizacja WHERE id_org=dzial and (nazwa_dzial='handel' OR nazwa_dzial='serwis') GROUP BY dzial";
 echo($sql);
 
 $result = mysqli_query($conn, $sql);
@@ -253,11 +253,11 @@ if ( $result) {
     }
 
 echo('<table border="1">');
-    echo('<th>Suma wieku</th><th>nazwa dzial</th><th>zarobki</th><th>dzial</th><th>data urodzenia</th>');
+    echo('<th>nazwa dzial</th><th>wiek</th>');
 
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo('<td>'.$row['SumaWieku'].'</td><td>'.$row['nazwa_dzial'].'</td>');
+        echo('<td>'.$row['nazwa_dzial'].'</td><td>'.$row['min'].'</td>');
         echo('</tr>');
     }
 
@@ -265,7 +265,7 @@ echo('<table border="1">');
     
     
   echo("<h3>Zad.12</h3>");
-$sql = "select sum(year(curdate()) - year(data_urodzenia)) as SumaWieku, nazwa_dzial from pracownicy,organizacja where id_org=dzial GROUP BY dzial";
+$sql = "SELECT MIN(YEAR(CURDATE()) - YEAR(data_urodzenia)) as min, nazwa_dzial,imie from pracownicy,organizacja WHERE id_org=dzial and (nazwa_dzial='handel' OR nazwa_dzial='serwis') GROUP BY dzial";
 echo($sql);
 
 $result = mysqli_query($conn, $sql);
@@ -280,7 +280,7 @@ echo('<table border="1">');
 
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo('<td>'.$row['id_pracownicy'].'</td><td>'.$row['imie'].'</td><td>'.$row['zarobki'].'</td><td>'.$row['dzial'].'</td><td>'.$row['data_urodzenia'].'</td>');
+        echo('<td>'.$row['imie'].'</td><td>'.$row['nazwa_dzial'].'</td><td>'.$row['min'].'</td>');
         echo('</tr>');
     }
 
@@ -288,7 +288,7 @@ echo('<table border="1">');
     
     
  echo("<h3>Zad.13</h3>");
-$sql = "SELECT SUM(YEAR(CURDATE()) - YEAR(data_urodzenia)) as SumaWieku, nazwa_dzial from pracownicy,organizacja WHERE id_org=dzial GROUP BY dzial";
+$sql = "SELECT imie,DATEDIFF(CURDATE(),data_urodzenia) AS dni_zycia FROM pracownicy";
 echo($sql);
 
 $result = mysqli_query($conn, $sql);
@@ -299,11 +299,11 @@ if ( $result) {
     }
 
 echo('<table border="1">');
-    echo('<th>id</th><th>imie</th><th>zarobki</th><th>dzial</th><th>data urodzenia</th>');
+    echo('<th>id</th><th>imie</th><th>dni_zycia</th>');
 
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo('<td>'.$row['id_pracownicy'].'</td><td>'.$row['imie'].'</td><td>'.$row['zarobki'].'</td><td>'.$row['dzial'].'</td><td>'.$row['data_urodzenia'].'</td>');
+        echo('<td>'.$row['id_pracownicy'].'</td><td>'.$row['imie'].'</td><td>'.$row['dni_zycia'].'</td>');
         echo('</tr>');
     }
 
