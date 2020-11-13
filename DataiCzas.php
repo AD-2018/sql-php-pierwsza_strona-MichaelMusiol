@@ -39,7 +39,7 @@ echo('<table border="1">');
     
 
     echo("<h3>Zad.2</h3>");
-$sql = "select * ,year(curdate())-year(data_urodzenia) as wiek,dzial,nazwa_dzial from pracownicy, organizacja where nazwa_dzial='serwis'";
+$sql = "select * ,year(curdate())-year(data_urodzenia) as wiek,dzial,nazwa_dzial from pracownicy, organizacja where id_org=dzial and nazwa_dzial='serwis'";
 echo($sql);
 
 $result = mysqli_query($conn, $sql);
