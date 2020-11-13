@@ -276,7 +276,7 @@ if ( $result) {
     }
 
 echo('<table border="1">');
-    echo('<th>id</th><th>imie</th><th>zarobki</th><th>dzial</th><th>data urodzenia</th>');
+    echo('<th>imie</th><th>dzial</th><th>min</th>');
 
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
@@ -299,11 +299,34 @@ if ( $result) {
     }
 
 echo('<table border="1">');
-    echo('<th>id</th><th>imie</th><th>dni_zycia</th>');
+    echo('<th>imie</th><th>dni_zycia</th>');
 
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo('<td>'.$row['id_pracownicy'].'</td><td>'.$row['imie'].'</td><td>'.$row['dni_zycia'].'</td>');
+        echo('<td>'.$row['imie'].'</td><td>'.$row['dni_zycia'].'</td>');
+        echo('</tr>');
+    }
+
+    echo('</table>');
+    
+    
+echo("<h3>Zad.14</h3>");
+$sql = "SELECT * FROM pracownicy WHERE imie NOT LIKE '%a' ORDER BY data_urodzenia ASC LIMIT 1";
+echo($sql);
+
+$result = mysqli_query($conn, $sql);
+if ( $result) {
+        echo("<li>ok");
+    } else {
+      echo("Error: ".$sql."<br/><br/>". mysqli_error($conn));
+    }
+
+echo('<table border="1">');
+    echo('<th>imie</th><th>data_urodzenia</th>');
+
+    while($row=mysqli_fetch_assoc($result)){
+        echo('<tr>');
+        echo('<td>'.$row['imie'].'</td><td>'.$row['data_urodzenia'].'</td>');
         echo('</tr>');
     }
 
@@ -313,7 +336,7 @@ echo('<table border="1">');
 
     
  echo("<h3>Zad.1</h3>");
-$sql = "SELECT SUM(YEAR(CURDATE()) - YEAR(data_urodzenia)) as SumaWieku, nazwa_dzial from pracownicy,organizacja WHERE id_org=dzial GROUP BY dzial";
+$sql = "SELECT *, DATE_FORMAT(data_urodzenia,'%W-%m-%Y') from pracownicy";
 echo($sql);
 
 $result = mysqli_query($conn, $sql);
