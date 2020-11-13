@@ -39,7 +39,7 @@ echo('<table border="1">');
     
 
     echo("<h3>Zad.2</h3>");
-$sql = "select * ,year(curdate())-year(data_urodzenia) as wiek from pracownicy, organizacja where nazwa_dzial='serwis'";
+$sql = "select * ,year(curdate())-year(data_urodzenia) as wiek,dzial,nazwa_dzial from pracownicy, organizacja where nazwa_dzial='serwis'";
 echo($sql);
 
 $result = mysqli_query($conn, $sql);
@@ -50,11 +50,11 @@ if ( $result) {
     }
 
 echo('<table border="1">');
-    echo('<th>id</th><th>imie</th><th>wiek</th>');
+    echo('<th>id</th><th>imie</th><th>dzial</th><th>nazwa_dzial</th><th>wiek</th>');
 
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo('<td>'.$row['id_pracownicy'].'</td><td>'.$row['imie'].'</td><td>'.$row['wiek'].'</td>');
+        echo('<td>'.$row['id_pracownicy'].'</td><td>'.$row['imie'].'</td><td>'.$row['dzial'].'</td><td>'.$row['nazwa_dzial'].'</td><td>'.$row['wiek'].'</td>');
         echo('</tr>');
     }
 
@@ -83,7 +83,7 @@ echo('<table border="1">');
     echo('</table>');
     
  echo("<h3>Zad.4</h3>");
-$sql = "select sum(year(curdate()) - year(data_urodzenia)) as Suma,* from pracownicy,organizacja where id_org=dzial and nazwa_dzial='handel'";
+$sql = "SELECT SUM(YEAR(CURDATE()) - YEAR(data_urodzenia)) as Suma from pracownicy,organizacja WHERE id_org=dzial and nazwa_dzial='handel'";
 echo($sql);
 
 $result = mysqli_query($conn, $sql);
