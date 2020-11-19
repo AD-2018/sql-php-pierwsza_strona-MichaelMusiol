@@ -1,9 +1,21 @@
-<?php
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+<body>
+    <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-MichaelMusiol">Github</a>
+    <a href="index.php">Pracownicy</a>
+    <a href="Pracownicyorganizacja.php">Organizacja Pracownicy</a>
+    <a href="funkcjeAgregujace.php">Funkcje Agregujace</a>
+    <a href="DataiCzas.php">Data i Czas</a>
+    <a href="index.html">Strona(formularz)</a>
+    <a href="insert.php">Strona(insert)</a>
+    
 
-$servername = "mysql-michael-musiol.alwaysdata.net";
-$username = "218443";
-$password = "Q@wertyuiop";
-$dbname = "michael-musiol_pracownicy_organizacja";
+<?php
+require_once("lib.php");
+
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
@@ -17,3 +29,5 @@ $conn->query($sql);
 
 $conn->close();
 ?>
+  </body>
+</html>
