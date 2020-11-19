@@ -10,6 +10,7 @@
     <a href="Pracownicyorganizacja.php">Organizacja Pracownicy</a>
     <a href="funkcjeAgregujace.php">Funkcje Agregujace</a>
     <a href="DataiCzas.php">Data i Czas</a>
+    <a href="index.html">Strona(formularz)</a>
     
 <?php
 require_once("lib.php");
