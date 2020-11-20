@@ -11,7 +11,7 @@
     <a href="DataiCzas.php">Data i Czas</a>
     <a href="index.html">Strona(form)</a>
     <a href="insert.php">Strona(insert)</a>
-    <a href="daneDoBazy.html">daneDoBazy</a>
+    <a href="daneDoBazy.html">daneDoBazy</a> 
     
 
 <?php
