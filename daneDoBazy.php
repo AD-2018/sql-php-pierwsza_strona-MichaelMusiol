@@ -13,7 +13,7 @@
     <a href="insert.php">Strona(insert)</a>
     <a href="daneDoBazy.html">daneDoBazy</a>
     
-
+ 
     
     
 <?php
