@@ -12,7 +12,7 @@
     <br/><br/><br/>
     <a href="ProstyFormularz.php">Formularz</a>
     <a href="insert.php">Insert</a>
-    <a href="daneDoBazy.html">Dane Do Bazy</a> 
+    <a href="daneDoBazy.php">Dane Do Bazy</a> 
     
 
 <?php
