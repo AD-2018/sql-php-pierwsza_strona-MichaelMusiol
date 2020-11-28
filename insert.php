@@ -24,10 +24,6 @@ echo "<li>". $_POST['data_urodzenia'];
     
     $sql = "INSERT INTO pracownicy (id_pracownicy, imie, dzial, zarobki, data_urodzenia) 
     VALUES (null, '".$_POST['imie']."', '".$_POST['dzial']."','".$_POST['zarobki']."','".$_POST['data_urodzenia']."')";
-    $puste = mysqli_query($conn,"SELECT * FROM pracownicy WHERE imie = ''";
-    if($puste==TRUE)){
-    $_POST['imie']="Ksawery";
-    }
 
     
   echo "<br>New record created successfully";
