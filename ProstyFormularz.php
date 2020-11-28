@@ -6,16 +6,17 @@
   <title>Prosty Formularz</title>
 </head>
 <body>
-    <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-MichaelMusiol">Github</a>
+<a href="https://github.com/AD-2018/sql-php-pierwsza_strona-MichaelMusiol">Github</a>
     <a href="index.php">Pracownicy</a>
     <a href="Pracownicyorganizacja.php">Organizacja Pracownicy</a>
     <a href="funkcjeAgregujace.php">Funkcje Agregujace</a>
     <a href="DataiCzas.php">Data i Czas</a>
-    <a href="index.html">Strona(form)</a>
-    <a href="insert.php">Strona(insert)</a>
-    <a href="daneDoBazy.html">daneDoBazy</a>
+    <br/><br/><br/>
+    <a href="ProstyFormularz.php">Formularz</a>
+    <a href="insert.php">Insert</a>
+    <a href="daneDoBazy.php">Dane Do Bazy</a>
 <form action="strona.php" method="POST">
-   <input type="text" name="firstname"></br>
+   <input type="text" name="firstname"><br/>
    <input type="submit" value="wyślij do strona.php">
 </form>
 </body>
