@@ -35,7 +35,7 @@
     $sql = "SELECT * FROM pracownicy, organizacja where id_org=dzial";
     echo("<br>");
     echo($sql);
-	if($sql=="null,,,,"){
+	if($sql=="null,,0,0,0000-00-00"){
     	$result = mysqli_query($conn, $sql1);
 	} else {
 	$result = mysqli_query($conn, $sql);
