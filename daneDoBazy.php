@@ -17,9 +17,9 @@
  
     <h3>DODAJ PRACOWNIKA</h3>	
 	<form action="insert.php" method="POST">
-	<label>Imię </label><input type="text" name="imie" required></br>
-	<label>Dział </label><input type="number" name="dzial" required></br>
-	<label>Zarobki </label><input type="number" name="zarobki" required></br>
+	<label>Imię:    </label><input type="text" name="imie" required></br>
+	<label>Dział:   </label><input type="number" name="dzial" required></br>
+	<label>Zarobki: </label><input type="number" name="zarobki" required></br>
 	<input type="date" name="data_urodzenia" required></br>
 	<input type="submit" value="dodaj pracownika">
 	</form>
