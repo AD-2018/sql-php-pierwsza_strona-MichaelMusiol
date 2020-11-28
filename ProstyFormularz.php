@@ -3,9 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Prosty Formularz</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <?php 
+  require_once("lib.php");
+  ?>
 <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-MichaelMusiol">Github</a>
     <a href="index.php">Pracownicy</a>
     <a href="Pracownicyorganizacja.php">Organizacja Pracownicy</a>
