@@ -24,6 +24,10 @@ echo "<li>". $_POST['data_urodzenia'];
 
 $sql = "INSERT INTO pracownicy (id_pracownicy, imie, dzial, zarobki, data_urodzenia) 
        VALUES (null, '".$_POST['imie']."', '".$_POST['dzial']."','".$_POST['zarobki']."','".$_POST['data_urodzenia']."')";
+    
+$sql1 = "INSERT INTO pracownicy (id_pracownicy, imie, dzial, zarobki, data_urodzenia) 
+       VALUES (null, Ksawery, 2, 35,1987-02-01)";
+
 
 if ($conn->query($sql) === TRUE) {
   echo "<br>New record created successfully";
