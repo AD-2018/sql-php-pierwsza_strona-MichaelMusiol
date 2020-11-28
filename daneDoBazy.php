@@ -17,17 +17,17 @@
  
     <h3>DODAJ PRACOWNIKA</h3>	
 	<form action="insert.php" method="POST">
-	<label>Imię </label><input type="text" name="imie"></br>
-	<label>Dział </label><input type="number" name="dzial"></br>
-	<label>Zarobki </label><input type="number" name="zarobki"></br>
-	<input type="date" name="data_urodzenia"></br>
+	<label>Imię </label><input type="text" name="imie" required></br>
+	<label>Dział </label><input type="number" name="dzial" required></br>
+	<label>Zarobki </label><input type="number" name="zarobki" required></br>
+	<input type="date" name="data_urodzenia" required></br>
 	<input type="submit" value="dodaj pracownika">
 	</form>
     
 
     <h3>USUŃ PRACOWNIKA</h3>
 	<form action="delete.php" method="POST">
-   	<label> pracownika </label><input type="number" name="id"></br>
+   	<label> pracownika </label><input type="number" name="id" required></br>
     <input type="submit" value="Usuń pracownika">
 	</form>
 <?php
