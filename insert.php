@@ -15,7 +15,8 @@
     <a href="daneDoBazy.php">Dane Do Bazy</a>
 
 <?php
-echo("jestes w insert.php <br>");
+require_once("lib.php");
+echo("<br/>jestes w insert.php <br/>");
 echo "<li>". $_POST['imie'];
 echo "<li>". $_POST['dzial'];
 echo "<li>". $_POST['zarobki'];
