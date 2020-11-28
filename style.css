@@ -20,6 +20,7 @@ a {
 background-color: black;
   box-shadow: 0 5px 0 red;
   color: white;
+  padding: 0.5em 1em;
   position: relative;
   text-decoration: none;
   text-transform: uppercase;
