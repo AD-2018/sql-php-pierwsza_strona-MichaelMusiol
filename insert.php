@@ -26,7 +26,7 @@ echo "<li>". $_POST['data_urodzenia'];
     {$sql = "INSERT INTO pracownicy (id_pracownicy, imie, dzial, zarobki, data_urodzenia) 
     VALUES (null, '".$_POST['imie']."', '".$_POST['dzial']."','".$_POST['zarobki']."','".$_POST['data_urodzenia']."')";}
     else{
-        $sql = "INSERT INTO pracownicy (id_pracownicy, imie, dzial, zarobki, data_urodzenia) VALUES(null,'0',0,0,0000-0-0)";
+        $sql = "INSERT INTO pracownicy (id_pracownicy, imie, dzial, zarobki, data_urodzenia) VALUES(null,'1',1,1,1111-11-11)";
     }
     
     
