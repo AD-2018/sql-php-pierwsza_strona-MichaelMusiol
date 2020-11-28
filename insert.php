@@ -31,9 +31,8 @@ echo "<li>". $_POST['data_urodzenia'];
     
     
     
-    
-  echo "<br>New record created successfully";
-    
+
+  
     
     echo "<li>". $sql;
 
@@ -44,7 +43,10 @@ if ($conn->query($sql) === TRUE) {
 }
 
 $conn->close();
-
+    
+  echo "<br/>Dodano nowy wiersz pomyślnie";
+  sleep(5);
+  echo "<br/>Za 5 sekund zostaniesz przekierowany do 'Dane Do Bazy'";
 ?>
   </body>
 </html>
