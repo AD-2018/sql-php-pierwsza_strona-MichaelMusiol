@@ -35,7 +35,11 @@
     $sql = "SELECT * FROM pracownicy, organizacja where id_org=dzial";
     echo("<br>");
     echo($sql);
-    $result = mysqli_query($conn, $sql);
+	if($sql=="null,,,,"){
+    	$result = mysqli_query($conn, $sql1);
+	} else {
+	$result = mysqli_query($conn, $sql);
+	}
 	mysqli_query($conn, "ALTER TABLE `pracownicy` CHANGE `id_pracownicy` `id_pracownicy` INT(11) NOT NULL");
 	mysqli_query($conn, "ALTER TABLE `pracownicy` CHANGE `id_pracownicy` `id_pracownicy` INT(11) NOT NULL AUTO_INCREMENT");
     if ( $result) {
