@@ -18,7 +18,7 @@
     <a href="ProstyFormularz.php">Formularz</a>
     <a href="insert.php">Insert</a>
     <a href="daneDoBazy.php">Dane Do Bazy</a>
-    <br/>
+    <br/><br/><br/>
 <form action="strona.php" method="POST">
    <input type="text" name="firstname"><br/>
    <input type="submit" value="wyślij do strona.php">
