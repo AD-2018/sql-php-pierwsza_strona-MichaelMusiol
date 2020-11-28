@@ -31,6 +31,16 @@ $sql1 = "INSERT INTO pracownicy (id_pracownicy, imie, dzial, zarobki, data_urodz
     $_POST['imie']="Ksawery";
     }
   echo "<br>New record created successfully";
+    
+    echo "<li>". $sql;
+
+if ($conn->query($sql) === TRUE) {
+  echo "New record created successfully";
+} else {
+  echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$conn->close();
 
 ?>
   </body>
