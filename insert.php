@@ -21,16 +21,16 @@ echo "<li>". $_POST['imie'];
 echo "<li>". $_POST['dzial'];
 echo "<li>". $_POST['zarobki'];
 echo "<li>". $_POST['data_urodzenia'];
-
-$sql = "INSERT INTO pracownicy (id_pracownicy, imie, dzial, zarobki, data_urodzenia) 
-       VALUES (null, '".$_POST['imie']."', '".$_POST['dzial']."','".$_POST['zarobki']."','".$_POST['data_urodzenia']."')";
     
-$sql1 = "INSERT INTO pracownicy (id_pracownicy, imie, dzial, zarobki, data_urodzenia) 
-       VALUES (null, Ksawery, 2, 35,1987-02-01)";
-    if(mysqli_query($conn,"SELECT * FROM pracownicy WHERE imie = ' '")){
+    $puste = mysqli_query($conn,"SELECT * FROM pracownicy WHERE imie = ''";
+    if($puste==TRUE)){
     $_POST['imie']="Ksawery";
     }
+    $sql = "INSERT INTO pracownicy (id_pracownicy, imie, dzial, zarobki, data_urodzenia) 
+       VALUES (null, '".$_POST['imie']."', '".$_POST['dzial']."','".$_POST['zarobki']."','".$_POST['data_urodzenia']."')";
+    
   echo "<br>New record created successfully";
+    
     
     echo "<li>". $sql;
 
