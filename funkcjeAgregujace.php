@@ -10,9 +10,10 @@
     <a href="Pracownicyorganizacja.php">Organizacja Pracownicy</a>
     <a href="funkcjeAgregujace.php">Funkcje Agregujace</a>
     <a href="DataiCzas.php">Data i Czas</a>
-    <a href="index.html">Strona(formularz)</a>
-    <a href="index.html">Strona(insert)</a>
-    
+    <br/><br/><br/>
+    <a href="ProstyFormularz.php">Formularz</a>
+    <a href="insert.php">Insert</a>
+    <a href="daneDoBazy.php">Dane Do Bazy</a>
 <?php
 require_once("lib.php");
 echo("<h1>Michael Musiol nr.8</h1>");
