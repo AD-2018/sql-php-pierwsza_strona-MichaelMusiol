@@ -31,5 +31,5 @@ $conn->close();
   
   //sleep(5);
   //echo "<br/>Za 5 sekund zostaniesz przekierowany do 'Dane Do Bazy'";
-  //header('Location: https://php-michael-projekt1.herokuapp.com/daneDoBazy.php');
+  header('Location: https://php-michael-projekt1.herokuapp.com/daneDoBazy.php');
 ?>
