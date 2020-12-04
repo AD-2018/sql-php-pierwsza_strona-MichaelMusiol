@@ -32,7 +32,7 @@ $result = mysqli_query($conn, $sql);
     echo('</table>');
 
 echo("<h3>Tabela Tytułów</h3>");
-$sql = "SELECT * FROM biblTytul";
+$sql = "SELECT * FROM biblTytuł";
     $result = mysqli_query($conn, $sql);
     echo('<table border="1">');
     echo('<th>id</th><th>Tytuł</th>');
@@ -45,7 +45,7 @@ $sql = "SELECT * FROM biblTytul";
 
     echo('</table>');
 echo("<h3>Połączone</h3>");
-$sql = "SELECT * FROM biblAutor_biblTytul";
+$sql = "SELECT * FROM biblAutor_biblTytuł";
     $result = mysqli_query($conn, $sql);
         echo('<table border="1">');
     echo('<th>id</th><th>Autor</th><th>Tytuł</th>');
