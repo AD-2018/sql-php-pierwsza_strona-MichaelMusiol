@@ -18,13 +18,40 @@
 <?php
     require_once("lib.php");
 echo("<h3>Tabela Autorów</h3>");
-$sql = "SELECT * FROM pracownicy";
-echo("<h3>Tabela Autorów</h3>");
 $sql = "SELECT * FROM biblAutor";
+    echo('<table border="1">');
+    echo('<th>id</th><th>Autor</th>');
+
+    while($row=mysqli_fetch_assoc($result)){
+        echo('<tr>');
+        echo('<td>'.$row['id'].'</td><td>'.$row['autor'].'</td>');
+        echo('</tr>');
+    }
+
+    echo('</table>');
+
 echo("<h3>Tabela Tytułów</h3>");
 $sql = "SELECT * FROM biblTytul";
+    echo('<table border="1">');
+    echo('<th>id</th><th>Tytuł</th>');
+
+    while($row=mysqli_fetch_assoc($result)){
+        echo('<tr>');
+        echo('<td>'.$row['id'].'</td><td>'.$row['tytuł'].'</td>');
+        echo('</tr>');
+    }
+
+    echo('</table>');
 echo("<h3>Połączone</h3>");
 $sql = "SELECT * FROM biblAutor_biblTytul";
+        echo('<table border="1">');
+    echo('<th>id</th><th>Autor</th><th>Tytuł</th>');
+
+    while($row=mysqli_fetch_assoc($result)){
+        echo('<tr>');
+        echo('<td>'.$row['id'].'</td><td>'.$row['biblAutor_id'].'</td><td>'.$row['biblTytuł_id'].'</td>');
+        echo('</tr>');
+    }
 ?>
 </body>
 </html>
