@@ -19,6 +19,7 @@
     require_once("lib.php");
 echo("<h3>Tabela Autorów</h3>");
 $sql = "SELECT * FROM biblAutor";
+$result = mysqli_query($conn, $sql);
     echo('<table border="1">');
     echo('<th>id</th><th>Autor</th>');
 
@@ -32,6 +33,7 @@ $sql = "SELECT * FROM biblAutor";
 
 echo("<h3>Tabela Tytułów</h3>");
 $sql = "SELECT * FROM biblTytul";
+    $result = mysqli_query($conn, $sql);
     echo('<table border="1">');
     echo('<th>id</th><th>Tytuł</th>');
 
@@ -44,6 +46,7 @@ $sql = "SELECT * FROM biblTytul";
     echo('</table>');
 echo("<h3>Połączone</h3>");
 $sql = "SELECT * FROM biblAutor_biblTytul";
+    $result = mysqli_query($conn, $sql);
         echo('<table border="1">');
     echo('<th>id</th><th>Autor</th><th>Tytuł</th>');
 
