@@ -5,7 +5,7 @@
 </head>
 <body>
 
-    <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-MichaelMusiol">Github</a>
+        <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-MichaelMusiol">Github</a>
     <a href="index.php">Pracownicy</a>
     <a href="Pracownicyorganizacja.php">Organizacja Pracownicy</a>
     <a href="funkcjeAgregujace.php">Funkcje Agregujace</a>
@@ -13,7 +13,9 @@
     <br/><br/><br/>
     <a href="ProstyFormularz.php">Formularz</a>
     <a href="insert.php">Insert</a>
-    <a href="daneDoBazy.php">Dane Do Bazy</a>
+    <a href="daneDoBazy.php">Dane Do Bazy</a> 
+    <br/><br/><br/>
+    <a href="ksiazki.php">Książki</a>
     
 <?php
 require_once("lib.php");
