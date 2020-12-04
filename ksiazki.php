@@ -16,7 +16,9 @@
     
 
 <?php
-require_once("lib.php");
+    require_once("lib.php");
+echo("<h3>Tabela Autorów</h3>");
+$sql = "SELECT * FROM pracownicy";
 echo("<h3>Tabela Autorów</h3>");
 $sql = "SELECT * FROM biblAutor";
 echo("<h3>Tabela Tytułów</h3>");
