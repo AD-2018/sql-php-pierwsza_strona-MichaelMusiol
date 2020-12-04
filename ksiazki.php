@@ -52,6 +52,7 @@ $sql = "SELECT * FROM biblAutor_biblTytul";
         echo('<td>'.$row['id'].'</td><td>'.$row['biblAutor_id'].'</td><td>'.$row['biblTytuł_id'].'</td>');
         echo('</tr>');
     }
+    echo('</table>');
 ?>
 </body>
 </html>
