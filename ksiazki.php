@@ -13,6 +13,8 @@
     <a href="ProstyFormularz.php">Formularz</a>
     <a href="insert.php">Insert</a>
     <a href="daneDoBazy.php">Dane Do Bazy</a> 
+    <br/><br/><br/>
+    <a href="ksiazki.php">Książki</a>
     
 
 <?php
