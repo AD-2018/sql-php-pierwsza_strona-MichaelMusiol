@@ -27,7 +27,7 @@ $result = mysqli_query($conn, $sql);
 
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo('<td>'.$row['id'].'</td><td>'.$row['autor'].'</td>');
+        echo('<td>'.$row['id_autor'].'</td><td>'.$row['autor'].'</td>');
         echo('</tr>');
     }
 
@@ -41,20 +41,20 @@ $sql = "SELECT * FROM biblTytuł";
 
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo('<td>'.$row['id'].'</td><td>'.$row['tytuł'].'</td>');
+        echo('<td>'.$row['id_tytuł'].'</td><td>'.$row['tytuł'].'</td>');
         echo('</tr>');
     }
 
     echo('</table>');
 echo("<h3>Połączone</h3>");
-$sql = "SELECT * FROM biblAutor_biblTytuł";
+$sql = "SELECT * FROM biblAutor_biblTytuł,biblTytuł,biblAutor where biblAutor_id=id_autor and biblTytuł_id=id_tytuł";
     $result = mysqli_query($conn, $sql);
         echo('<table border="1">');
-    echo('<th>id</th><th>Autor</th><th>Tytuł</th>');
+    echo('<th>id</th><th>Autor_id</th><th>Autor</th><th>Tytuł_id</th><th>Tytuł</th>');
 
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo('<td>'.$row['id'].'</td><td>'.$row['biblAutor_id'].'</td><td>'.$row['biblTytuł_id'].'</td>');
+        echo('<td>'.$row['id'].'</td><td>'.$row['biblAutor_id'].'</td><td>'.$row['autor'].'</td><td>'.$row['biblTytuł_id'].'</td><td>'.$row['tytuł'].'</td>');
         echo('</tr>');
     }
     echo('</table>');
