@@ -39,8 +39,8 @@ $sql = "SELECT * FROM biblTytuł";
 echo('<select name="Tytuł">');
 
     while($row=mysqli_fetch_assoc($result)){
-        echo'<option value="'.$row['id_tytul'].'">';
-        echo($row['tytul']);
+        echo'<option value="'.$row['id_tytuł'].'">';
+        echo($row['tytuł']);
         echo"</option>"; 
     }
 echo('</select>');
