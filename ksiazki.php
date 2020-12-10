@@ -19,33 +19,35 @@
 
 <?php
     require_once("lib.php");
-echo("<h3>Tabela Autorów</h3>");
+echo("<h3>Autorzy</h3>");
 $sql = "SELECT * FROM biblAutor";
 $result = mysqli_query($conn, $sql);
-    echo('<table border="1">');
-    echo('<th>id</th><th>Autor</th>');
+
+echo('<select name="Autor">');
 
     while($row=mysqli_fetch_assoc($result)){
-        echo('<tr>');
-        echo('<td>'.$row['id_autor'].'</td><td>'.$row['autor'].'</td>');
-        echo('</tr>');
+        echo'<option value="'.$row['id_autor'].'">';
+        echo($row['autor']);
+        echo"</option>"; 
     }
+echo('</select>');
+  echo("<br/><br/>");
 
-    echo('</table>');
-
-echo("<h3>Tabela Tytułów</h3>");
+echo("<h3>Tytuły</h3>");
 $sql = "SELECT * FROM biblTytuł";
     $result = mysqli_query($conn, $sql);
-    echo('<table border="1">');
-    echo('<th>id</th><th>Tytuł</th>');
+echo('<select name="Tytuł">');
 
     while($row=mysqli_fetch_assoc($result)){
-        echo('<tr>');
-        echo('<td>'.$row['id_tytuł'].'</td><td>'.$row['tytuł'].'</td>');
-        echo('</tr>');
+        echo'<option value="'.$row['id_tytul'].'">';
+        echo($row['tytul']);
+        echo"</option>"; 
     }
-
-    echo('</table>');
+echo('</select>');
+  echo("<br/><br/>");
+    
+    
+    
 echo("<h3>Połączone</h3>");
 $sql = "SELECT * FROM biblAutor_biblTytuł,biblTytuł,biblAutor where id_tytuł=biblTytuł_id AND id_autor=biblAutor_id order by id";
     $result = mysqli_query($conn, $sql);
