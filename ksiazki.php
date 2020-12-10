@@ -47,7 +47,7 @@ $sql = "SELECT * FROM biblTytuł";
 
     echo('</table>');
 echo("<h3>Połączone</h3>");
-$sql = "SELECT * FROM biblAutor_biblTytuł,biblTytuł,biblAutor where id_tytuł=biblTytuł_id AND id_autor=biblAutor_id order by id_tytuł";
+$sql = "SELECT * FROM biblAutor_biblTytuł,biblTytuł,biblAutor where id_tytuł=biblTytuł_id AND id_autor=biblAutor_id order by id";
     $result = mysqli_query($conn, $sql);
         echo('<table border="1">');
     echo('<th>id</th><th>Autor</th><th>Tytuł</th>');
