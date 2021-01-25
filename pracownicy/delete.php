@@ -5,7 +5,7 @@
 </head>
 <body>
 <?php
-require_once("lib.php");
+require_once("https://github.com/AD-2018/sql-php-pierwsza_strona-MichaelMusiol/lib.php");
 echo("jestes w delete.php <br>");
 echo $_POST['id'];
 
@@ -31,5 +31,5 @@ $conn->close();
   
   //sleep(5);
   //echo "<br/>Za 5 sekund zostaniesz przekierowany do 'Dane Do Bazy'";
-  header('Location: https://php-michael-projekt1.herokuapp.com/daneDoBazy.php');
+  header('Location: https://php-michael-projekt1.herokuapp.com/pracownicy/daneDoBazy.php');
 ?>
