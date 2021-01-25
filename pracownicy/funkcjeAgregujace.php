@@ -5,16 +5,16 @@
 </head>
 <body>
 <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-MichaelMusiol">Github</a>
-    <a href="pracownicy/index.php">Pracownicy</a>
-    <a href="pracownicy/Pracownicyorganizacja.php">Organizacja Pracownicy</a>
-    <a href="pracownicy/funkcjeAgregujace.php">Funkcje Agregujace</a>
-    <a href="pracownicy/DataiCzas.php">Data i Czas</a>
+<a href="/pracownicy/index.php">Pracownicy</a>
+    <a href="/pracownicy/Pracownicyorganizacja.php">Organizacja Pracownicy</a>
+    <a href="/pracownicy/funkcjeAgregujace.php">Funkcje Agregujace</a>
+    <a href="/pracownicy/DataiCzas.php">Data i Czas</a>
     <br/><br/><br/>
-    <a href="pracownicy/ProstyFormularz.php">Formularz</a>
-    <a href="pracownicy/insert.php">Insert</a>
-    <a href="pracownicy/daneDoBazy.php">Dane Do Bazy</a> 
+    <a href="/pracownicy/ProstyFormularz.php">Formularz</a>
+    <a href="/pracownicy/insert.php">Insert</a>
+    <a href="/pracownicy/daneDoBazy.php">Dane Do Bazy</a> 
     <br/><br/><br/>
-    <a href="ksiazki/ksiazki.php">Książki</a>
+    <a href="/ksiazki/ksiazki.php">Książki</a>
 <?php
 require_once("https://github.com/AD-2018/sql-php-pierwsza_strona-MichaelMusiol/lib.php");
 echo("<h1>Michael Musiol nr.8</h1>");
