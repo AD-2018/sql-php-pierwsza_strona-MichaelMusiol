@@ -8,6 +8,7 @@
 <body>
   <?php 
   require_once("https://github.com/AD-2018/sql-php-pierwsza_strona-MichaelMusiol/lib.php");
+  header('Location: https://php-michael-projekt1.herokuapp.com/pracownicy/index.php');
   ?>
         <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-MichaelMusiol">Github</a>
     <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-MichaelMusiol/pracownicy/index.php">Pracownicy</a>
@@ -21,6 +22,7 @@
     <br/><br/><br/><br/>
     <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-MichaelMusiol/ksiazki/ksiazki.php">Książki</a>
     <br/><br/>
+
 </form>
 </body>
 </html>
