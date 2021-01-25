@@ -18,7 +18,7 @@
     
 
 <?php
-require_once("https://github.com/AD-2018/sql-php-pierwsza_strona-MichaelMusiol/lib.php");
+require_once("lib.php");
 echo("<h1>Michael Musiol nr.8</h1>");
 
 echo("<h3>Zad.1</h3>");
