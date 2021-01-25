@@ -20,6 +20,7 @@
     <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-MichaelMusiol/pracownicy/daneDoBazy.php">Dane Do Bazy</a> 
     <br/><br/><br/>
     <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-MichaelMusiol/ksiazki/ksiazki.php">Książki</a>
+    <br/><br/>
 <form action="strona.php" method="POST">
    <input type="text" name="firstname"><br/>
    <input type="submit" value="wyślij do strona.php">
