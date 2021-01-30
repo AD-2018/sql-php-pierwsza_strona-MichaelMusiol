@@ -45,20 +45,19 @@ body {
 }
 .imie {
   margin: 10px; 
-  
-
 }
 .red {
   background-color: lightcoral;
   width: 100%;
-  margin: 10px;
+  margin-left: 10px;
+  margin-right:45px;
 }
 .menu {
   margin: 10px;
 }
 .blue {
   background-color: #99ccff;
-  width: 10%
+  width: 15%
 }
 .tresc {
   margin: 10px;
