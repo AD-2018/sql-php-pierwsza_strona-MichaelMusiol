@@ -5,7 +5,14 @@
 <title>Michael Musiol  nr.8</title>
 </head>
 <body>
+<div class="calosc">
+    <div class="tytul red">
 <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-MichaelMusiol">Github</a>
+    <div class="imie">
+    <h1>Michael Musiol nr. 8</h1>
+    </div>
+    </div>
+    <div class="menu blue">
 <a href="index.php">Pracownicy</a>
     <a href="pracownicy/Pracownicyorganizacja.php">Organizacja Pracownicy</a>
     <a href="pracownicy/funkcjeAgregujace.php">Funkcje Agregujace</a>
@@ -15,7 +22,8 @@
     <a href="pracownicy/daneDoBazy.php">Dane Do Bazy</a> 
     <br/><br/><br/>
     <a href="ksiazki/ksiazki.php">Książki</a>
-    
+    </div>
+    <div class="tresc green">
 
 <?php
 require_once("lib.php");
@@ -88,7 +96,8 @@ echo('<table border="1">');
         
             echo('</table>');
         ?>
-
+        </div>
+</div>
 </body>
 </html>
 
