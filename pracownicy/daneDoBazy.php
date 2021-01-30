@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="../style.css">
 </head>
 <body>
 <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-MichaelMusiol">Github</a>
-<a href="/pracownicy/index.php">Pracownicy</a>
-    <a href="/pracownicy/Pracownicyorganizacja.php">Organizacja Pracownicy</a>
-    <a href="/pracownicy/funkcjeAgregujace.php">Funkcje Agregujace</a>
-    <a href="/pracownicy/DataiCzas.php">Data i Czas</a>
+<a href="../index.php">Pracownicy</a>
+    <a href="/sql-php-pierwsza_strona-MichaelMusiol/pracownicy/Pracownicyorganizacja.php">Organizacja Pracownicy</a>
+    <a href="/sql-php-pierwsza_strona-MichaelMusiol/pracownicy/funkcjeAgregujace.php">Funkcje Agregujace</a>
+    <a href="/sql-php-pierwsza_strona-MichaelMusiol/pracownicy/DataiCzas.php">Data i Czas</a>
     <br/><br/><br/>
-    <a href="/pracownicy/ProstyFormularz.php">Formularz</a>
-    <a href="/pracownicy/insert.php">Insert</a>
-    <a href="/pracownicy/daneDoBazy.php">Dane Do Bazy</a> 
+    <a href="/sql-php-pierwsza_strona-MichaelMusiol/pracownicy/ProstyFormularz.php">Formularz</a>
+    <a href="/sql-php-pierwsza_strona-MichaelMusiol/pracownicy/daneDoBazy.php">Dane Do Bazy</a> 
     <br/><br/><br/>
-    <a href="/ksiazki/ksiazki.php">Książki</a>
-    
- 
+    <a href="/sql-php-pierwsza_strona-MichaelMusiol/ksiazki/ksiazki.php">Książki</a>
+
+
     <h3>DODAJ PRACOWNIKA</h3>	
 	<form action="insert.php" method="POST">
 	<label>Imię:    </label><input type="text" name="imie" required></br>
@@ -33,7 +32,7 @@
     <input type="submit" value="Usuń pracownika">
 	</form>
 <?php
-    require_once("https://github.com/AD-2018/sql-php-pierwsza_strona-MichaelMusiol/lib.php");
+    require_once("../lib.php");
     $sql = "SELECT * FROM pracownicy, organizacja where id_org=dzial";
     echo("<br>");
     echo($sql);
