@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="/pracownicy/style.css" type="text/css" />
+<link rel="stylesheet" href="style.css">
+<title>Michael Musiol nr.8</title>
 </head>
 <body>
 <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-MichaelMusiol">Github</a>
