@@ -2,19 +2,9 @@
 <html>
 <head>
 <link rel="stylesheet" href="../style.css">
+<title>Michael Musiol  nr.8</title>
 </head>
 <body>
-<a href="https://github.com/AD-2018/sql-php-pierwsza_strona-MichaelMusiol">Github</a>
-<a href="/pracownicy/index.php">Pracownicy</a>
-    <a href="/sql-php-pierwsza_strona-MichaelMusiol/pracownicy/Pracownicyorganizacja.php">Organizacja Pracownicy</a>
-    <a href="/sql-php-pierwsza_strona-MichaelMusiol/pracownicy/funkcjeAgregujace.php">Funkcje Agregujace</a>
-    <a href="/sql-php-pierwsza_strona-MichaelMusiol/pracownicy/DataiCzas.php">Data i Czas</a>
-    <br/><br/><br/>
-    <a href="/sql-php-pierwsza_strona-MichaelMusiol/pracownicy/ProstyFormularz.php">Formularz</a>
-    <a href="/sql-php-pierwsza_strona-MichaelMusiol/pracownicy/daneDoBazy.php">Dane Do Bazy</a> 
-    <br/><br/><br/>
-    <a href="/sql-php-pierwsza_strona-MichaelMusiol/ksiazki/ksiazki.php">Książki</a>
-
 <?php
 require_once("../lib.php");
 echo("<br/><br/>jestes w insert.php <br/>");

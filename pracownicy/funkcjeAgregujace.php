@@ -2,18 +2,20 @@
 <html>
 <head>
 <link rel="stylesheet" href="../style.css">
+<title>Michael Musiol  nr.8</title>
 </head>
 <body>
 <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-MichaelMusiol">Github</a>
 <a href="../index.php">Pracownicy</a>
-    <a href="/sql-php-pierwsza_strona-MichaelMusiol/pracownicy/Pracownicyorganizacja.php">Organizacja Pracownicy</a>
-    <a href="/sql-php-pierwsza_strona-MichaelMusiol/pracownicy/funkcjeAgregujace.php">Funkcje Agregujace</a>
-    <a href="/sql-php-pierwsza_strona-MichaelMusiol/pracownicy/DataiCzas.php">Data i Czas</a>
+    <a href="/php-michael-projekt1.herokuapp.com/pracownicy/Pracownicyorganizacja.php">Organizacja Pracownicy</a>
+    <a href="/php-michael-projekt1.herokuapp.com/pracownicy/funkcjeAgregujace.php">Funkcje Agregujace</a>
+    <a href="/php-michael-projekt1.herokuapp.com/pracownicy/DataiCzas.php">Data i Czas</a>
     <br/><br/><br/>
-    <a href="/sql-php-pierwsza_strona-MichaelMusiol/pracownicy/ProstyFormularz.php">Formularz</a>
-    <a href="/sql-php-pierwsza_strona-MichaelMusiol/pracownicy/daneDoBazy.php">Dane Do Bazy</a> 
+    <a href="/php-michael-projekt1.herokuapp.com/pracownicy/ProstyFormularz.php">Formularz</a>
+    <a href="/php-michael-projekt1.herokuapp.com/pracownicy/daneDoBazy.php">Dane Do Bazy</a> 
     <br/><br/><br/>
-    <a href="/sql-php-pierwsza_strona-MichaelMusiol/ksiazki/ksiazki.php">Książki</a>
+    <a href="/php-michael-projekt1.herokuapp.com/ksiazki/ksiazki.php">Książki</a>
+
 <?php
 require_once("../lib.php");
 echo("<h1>Michael Musiol nr.8</h1>");
