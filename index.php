@@ -17,10 +17,8 @@
     <a href="pracownicy/Pracownicyorganizacja.php">Organizacja Pracownicy</a>
     <a href="pracownicy/funkcjeAgregujace.php">Funkcje Agregujace</a>
     <a href="pracownicy/DataiCzas.php">Data i Czas</a>
-    <br/><br/><br/>
     <a href="pracownicy/ProstyFormularz.php">Formularz</a>
     <a href="pracownicy/daneDoBazy.php">Dane Do Bazy</a> 
-    <br/><br/><br/>
     <a href="ksiazki/ksiazki.php">Książki</a>
     </div>
     <div class="tresc green">
