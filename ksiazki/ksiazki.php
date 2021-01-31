@@ -26,6 +26,7 @@
 
 <?php
 require_once("../lib.php");
+require_once("../template.php");
 echo("<h2>Autorzy</h2>");
 $sql = "SELECT * FROM biblAutor";
 $result = mysqli_query($conn, $sql);
@@ -57,16 +58,10 @@ echo('</select>');
     
 echo("<h3>Połączone</h3>");
 $sql = "SELECT * FROM biblAutor_biblTytuł,biblTytuł,biblAutor where id_tytuł=biblTytuł_id AND id_autor=biblAutor_id order by id";
-    $result = mysqli_query($conn, $sql);
-        echo('<table border="1">');
-    echo('<th>id</th><th>Autor</th><th>Tytuł</th>');
-
-    while($row=mysqli_fetch_assoc($result)){
-        echo('<tr>');
-        echo('<td>'.$row['id'].'</td><td>'.$row['autor'].'</td><td>'.$row['tytuł'].'</td>');
-        echo('</tr>');
-    }
-    echo('</table>');
+$wartosc1="id";
+$wartosc2="autor";
+$wartosc3="tytuł";
+tabelka3($sql,$conn,$wartosc1,$wartosc2,$wartosc3);
 ?>
 </div>
 </div>
