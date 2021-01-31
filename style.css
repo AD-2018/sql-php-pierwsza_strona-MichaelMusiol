@@ -1,10 +1,10 @@
-<style>
+
 table {
   border-collapse: collapse;
 }
 
 th, td {
-  text-align: left;
+  text-align: center;
   padding: 8px;
 }
 
@@ -47,24 +47,22 @@ body {
   margin: 10px; 
 }
 .red {
-  background-color: lightcoral;
-  width: 100%;
-  margin-left: 10px;
-  margin-right:45px;
+  background-color: red;
+  width: 98%;
 }
 .menu {
   margin: 10px;
+  text-align: center;
 }
 .blue {
-  background-color: #99ccff;
-  width: 15%
+  background-color: #0080ff;
+  width: 15%;
 }
 .tresc {
   margin: 10px;
 }
 .green {
-  background-color: lightgreen;
+  background-color:rgb(128, 255, 0);
   width: 80%;
   margin: 10px;
 }
-</style>
