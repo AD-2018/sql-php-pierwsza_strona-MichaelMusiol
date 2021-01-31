@@ -15,12 +15,12 @@
         <br/>
     <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-MichaelMusiol">Github</a><br/><br/><br/>
     <a href="../index.php">Pracownicy</a><br/><br/><br/>
-    <a href="../php-michael-projekt1.herokuapp.com/pracownicy/Pracownicyorganizacja.php">Organizacja</a><br/><br/><br/>
-    <a href="../php-michael-projekt1.herokuapp.com/pracownicy/funkcjeAgregujace.php">Funkcje</a><br/><br/><br/>
-    <a href="../php-michael-projekt1.herokuapp.com/pracownicy/DataiCzas.php">Data i Czas</a><br/><br/><br/>
-    <a href="../php-michael-projekt1.herokuapp.com/pracownicy/ProstyFormularz.php">Formularz</a><br/><br/><br/>
-    <a href="../php-michael-projekt1.herokuapp.com/pracownicy/daneDoBazy.php">Dane Do Bazy</a> <br/><br/><br/>
-    <a href="../php-michael-projekt1.herokuapp.com/ksiazki/ksiazki.php">Książki</a><br/><br/><br/>
+    <a href="../pracownicy/Pracownicyorganizacja.php">Organizacja</a><br/><br/><br/>
+    <a href="../pracownicy/funkcjeAgregujace.php">Funkcje</a><br/><br/><br/>
+    <a href="../pracownicy/DataiCzas.php">Data i Czas</a><br/><br/><br/>
+    <a href="../pracownicy/ProstyFormularz.php">Formularz</a><br/><br/><br/>
+    <a href="../pracownicy/daneDoBazy.php">Dane Do Bazy</a> <br/><br/><br/>
+    <a href="../ksiazki/ksiazki.php">Książki</a><br/><br/><br/>
     </div>
     <div class="tresc green">
 
