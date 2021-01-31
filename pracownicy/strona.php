@@ -7,14 +7,14 @@
 <body>
 <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-MichaelMusiol">Github</a>
 <a href="../index.php">Pracownicy</a>
-    <a href="/php-michael-projekt1.herokuapp.com/pracownicy/Pracownicyorganizacja.php">Organizacja Pracownicy</a>
-    <a href="/php-michael-projekt1.herokuapp.com/pracownicy/funkcjeAgregujace.php">Funkcje Agregujace</a>
-    <a href="/php-michael-projekt1.herokuapp.com/pracownicy/DataiCzas.php">Data i Czas</a>
+    <a href="../pracownicy/Pracownicyorganizacja.php">Organizacja Pracownicy</a>
+    <a href="../pracownicy/funkcjeAgregujace.php">Funkcje Agregujace</a>
+    <a href="../pracownicy/DataiCzas.php">Data i Czas</a>
     <br/><br/><br/>
-    <a href="/php-michael-projekt1.herokuapp.com/pracownicy/ProstyFormularz.php">Formularz</a>
-    <a href="/php-michael-projekt1.herokuapp.com/pracownicy/daneDoBazy.php">Dane Do Bazy</a> 
+    <a href="../pracownicy/ProstyFormularz.php">Formularz</a>
+    <a href="../pracownicy/daneDoBazy.php">Dane Do Bazy</a> 
     <br/><br/><br/>
-    <a href="/php-michael-projekt1.herokuapp.com/ksiazki/ksiazki.php">Książki</a>
+    <a href="../ksiazki/ksiazki.php">Książki</a>
 
 
     
