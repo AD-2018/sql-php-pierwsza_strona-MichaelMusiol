@@ -3,6 +3,7 @@
 <head>
 <link rel="stylesheet" href="style.css">
 <title>Michael Musiol  nr.8</title>
+    <link rel="icon" type="image/png" href="favicon.ico">
 </head>
 <body>
 <div class="calosc">
