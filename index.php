@@ -4,6 +4,9 @@
 <link rel="stylesheet" href="style.css">
 <title>Michael Musiol  nr.8</title>
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
 </head>
 <body>
 <div class="calosc">
