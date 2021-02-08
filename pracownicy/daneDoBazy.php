@@ -42,7 +42,7 @@
 	</form>
 <?php
     require_once("../lib.php");
-    $sql = "SELECT * FROM pracownicy, organizacja where id_org=dzial";
+    $sql = "SELECT * FROM pracownicy, organizacja where id_org=dzial order by id_pracownicy";
     echo("<br>");
     echo($sql);
 	if($sql=="null,' ',0,0,0000-00-00"){
