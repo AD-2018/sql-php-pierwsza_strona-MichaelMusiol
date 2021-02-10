@@ -27,6 +27,7 @@
     <div class="tresc green">
 <?php
 require_once("lib.php");
+echo($_SERVER["servername"]);
 require_once("template.php");
 echo("<h1>Michael Musiol nr.8</h1>");
 
