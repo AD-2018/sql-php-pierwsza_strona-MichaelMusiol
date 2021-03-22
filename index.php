@@ -28,6 +28,7 @@
 <?php
 require_once("lib.php");
 require_once("template.php");
+echo($_SERVER["servername"]);
 echo("<h1>Michael Musiol nr.8</h1>");
 
 echo("<h3>Zad.1</h3>");
