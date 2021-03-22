@@ -23,11 +23,14 @@
     <a href="pracownicy/daneDoBazy.php">Dane Do Bazy</a> <br/><br/><br/>
     <a href="ksiazki/ksiazki.php">Książki</a><br/><br/><br/>
     <a href="flexbox/index.html">Flexbox</a><br/><br/><br/>
-    <select><option><a href="css_grid/Strona1/index.html">Strona1</a><br/><br/><br/></option>
+    <a href="css_grid/index.html">CSS Grid</a><br/><br/><br/> 
+
+
+    <!-- <select><option><a href="css_grid/Strona1/index.html">Strona1</a><br/><br/><br/></option>
     <option><a href="css_grid/Strona2/index.html">Strona2</a></option>
     <option><a href="css_grid/Strona3/index.html">Strona3</a></option>
     <option><a href="css_grid/Strona4/index.html">Strona4</a></option>
-    <option><a href="css_grid/Strona4/index.html">Strona4</a></option></select><br/><br/><br/>
+    <option><a href="css_grid/Strona4/index.html">Strona4</a></option></select><br/><br/><br/> -->
     </div>
     <div class="tresc green">
 <?php
