@@ -22,7 +22,7 @@
     <a href="pracownicy/ProstyFormularz.php">Formularz</a><br/><br/><br/>
     <a href="pracownicy/daneDoBazy.php">Dane Do Bazy</a> <br/><br/><br/>
     <a href="ksiazki/ksiazki.php">Książki</a><br/><br/><br/>
-    <a href="flexbox/index.html">Książki</a><br/><br/><br/>
+    <a href="flexbox/index.html">Flexbox</a><br/><br/><br/>
     </div>
     <div class="tresc green">
 <?php
