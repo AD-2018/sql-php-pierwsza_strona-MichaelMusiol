@@ -14,16 +14,16 @@
     </div>
     <div class="menu blue">
     <br/>
-    <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-MichaelMusiol">Github</a>
-    <a href="index.php">Pracownicy</a>
-    <a href="pracownicy/Pracownicyorganizacja.php">Organizacja</a>
-    <a href="pracownicy/funkcjeAgregujace.php">Funkcje</a>
-    <a href="pracownicy/DataiCzas.php">Data i Czas</a>
-    <a href="pracownicy/ProstyFormularz.php">Formularz</a>
-    <a href="pracownicy/daneDoBazy.php">Dane Do Bazy</a>
-    <a href="ksiazki/ksiazki.php">Książki</a>
-    <a href="flexbox/index.html">Flexbox</a>
-    <a href="css_grid/index.html">CSS Grid</a>
+    <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-MichaelMusiol">Github</a><br/><br/><br/>
+    <a href="index.php">Pracownicy</a><br/><br/><br/>
+    <a href="pracownicy/Pracownicyorganizacja.php">Organizacja</a><br/><br/><br/>
+    <a href="pracownicy/funkcjeAgregujace.php">Funkcje</a><br/><br/><br/>
+    <a href="pracownicy/DataiCzas.php">Data i Czas</a><br/><br/><br/>
+    <a href="pracownicy/ProstyFormularz.php">Formularz</a><br/><br/><br/>
+    <a href="pracownicy/daneDoBazy.php">Dane Do Bazy</a> <br/><br/><br/>
+    <a href="ksiazki/ksiazki.php">Książki</a><br/><br/><br/>
+    <a href="flexbox/index.html">Flexbox</a><br/><br/><br/>
+    <a href="css_grid/index.html">CSS Grid</a><br/><br/><br/> 
 
 
     <!-- <select><option><a href="css_grid/Strona1/index.html">Strona1</a><br/><br/><br/></option>
