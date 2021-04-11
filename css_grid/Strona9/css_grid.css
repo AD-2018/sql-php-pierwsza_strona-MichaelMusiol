@@ -1,0 +1,41 @@
+* {
+    margin: 0px;
+    padding: 0px;
+  }
+  .container {
+    background-color: rgb(50, 117, 205);
+    height: 100vh;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas:
+      "b b b"
+      "b b b"
+      "a c f"
+      "a c f"
+      "a c f"
+      "a c f"
+      "a c f"
+      "e e e";
+  }
+  header {
+    background-color: red;
+    grid-area: a;
+  }
+  nav {
+    background-color: lime;
+    grid-area: b;
+  }
+  main {
+    background-color: lightblue;
+    grid-area: c;
+  }
+  aside {
+    background-color: yellow;
+    grid-area: e;
+  }
+  .pojemnik1 {
+    background-color: lightblue;
+    grid-area: f;
+  }
+
+  
