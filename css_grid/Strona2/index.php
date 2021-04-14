@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Zad.1</title>
+    <title>Zad.2</title>
     <link rel="stylesheet" href="css_grid.css"/>
 </head>
 <body>
@@ -11,7 +11,7 @@
         <h1><a href="../index.html">Wstecz</a></h1><br/>
             <?php
         require_once("../../lib.php");
-      $sql = "SELECT * FROM firmaPracownik";
+      $sql = "SELECT * FROM kancpra_Prawnik";
       echo("<h3>PRACOWNICY</h3>");
       
       $result = mysqli_query($conn, $sql);
@@ -20,7 +20,7 @@
       echo ("<tr><th>ID</th><th>PRACOWNIK</th>");
       while($row = mysqli_fetch_assoc($result)) {
           echo ('<tr>');
-          echo ("<td>".$row['id_pracownik']."</td><td>".$row['pracownik']."</td>");
+          echo ("<td>".$row['id_imie_nazwisko']."</td><td>".$row['imie_nazwisko']."</td>");
           echo ('</tr>');
       }
       echo ('</table>');
@@ -29,16 +29,16 @@
         <nav>
         <?php
         require_once("../../lib.php");
-      $sql = "SELECT * FROM firmaProjekt";
+      $sql = "SELECT * FROM kancpra_Sprawa";
       echo("<h3>PROJEKTY</h3>");
       
       $result = mysqli_query($conn, $sql);
       
       echo('<table border="1">');
-      echo ("<tr><th>ID</th><th>PROJEKT</th>");
+      echo ("<tr><th>ID</th><th>SPRAWY</th>");
       while($row = mysqli_fetch_assoc($result)) {
           echo ('<tr>');
-          echo ("<td>".$row['id_projekt']."</td><td>".$row['projekt']."</td>");
+          echo ("<td>".$row['id_nazwa_sprawy']."</td><td>".$row['nazwa_sprawy']."</td>");
           echo ('</tr>');
       }
       echo ('</table>');
@@ -53,7 +53,7 @@
         <footer>
         <?php
         require_once("../../lib.php");
-      $sql = "SELECT * FROM firmaPracownik,firmaProjekt,firmaPracownik_firmaProjekt WHERE firmaPracownik.id_pracownik=firmaPracownik_firmaProjekt.id_pracownik and firmaProjekt.id_projekt=firmaPracownik_firmaProjekt.id_projekt";
+      $sql = "SELECT * FROM kancpra_Prawnik,Prawnik_kancpra_Sprawa,kancpra_Prawnik_kancpra_Sprawa WHERE kancpra_Prawnik.id_imie_nazwisko=kancpra_Prawnik_kancpra_Sprawa.id_imie_nazwisko and kancpra_Sprawa.id_nazwa_sprawy=kancpra_Prawnik_kancpra_Sprawa.id_nazwa_sprawy";
       echo("<h3>WYNIK</h3>");
       
       $result = mysqli_query($conn, $sql);
@@ -62,7 +62,7 @@
       echo ("<tr><th>PRACOWNICY</th><th>PROJEKTY</th>");
       while($row = mysqli_fetch_assoc($result)) {
           echo ('<tr>');
-          echo ("<td>".$row['pracownik']."</td><td>".$row['projekt']."</td>");
+          echo ("<td>".$row['imie_nazwisko']."</td><td>".$row['nazwa_sprawy']."</td>");
           echo ('</tr>');
       }
       echo ('</table>');
