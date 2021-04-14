@@ -27,6 +27,8 @@
             ?>
         </header>
         <nav>
+        2
+        <main>
         <?php
         require_once("../../lib.php");
       $sql = "SELECT * FROM kancpra_Sprawa";
@@ -44,8 +46,6 @@
       echo ('</table>');
             ?>
         </nav>
-        <main>
-            2
         </main>
         <aside>
             3

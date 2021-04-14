@@ -27,6 +27,9 @@
             ?>
         </header>
         <nav>
+        1
+        </nav>
+        <main>
         <?php
         require_once("../../lib.php");
       $sql = "SELECT * FROM sysinfRola";
@@ -43,9 +46,6 @@
       }
       echo ('</table>');
             ?>
-        </nav>
-        <main>
-            2
         </main>
         <aside>
             3
