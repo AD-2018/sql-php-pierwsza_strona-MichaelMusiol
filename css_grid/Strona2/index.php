@@ -30,7 +30,7 @@
         <?php
         require_once("../../lib.php");
       $sql = "SELECT * FROM kancpra_Sprawa";
-      echo("<h3>PROJEKTY</h3>");
+      echo("<h3>SPRAWY</h3>");
       
       $result = mysqli_query($conn, $sql);
       
@@ -53,13 +53,13 @@
         <footer>
         <?php
         require_once("../../lib.php");
-      $sql = "SELECT * FROM kancpra_Prawnik,Prawnik_kancpra_Sprawa,kancpra_Prawnik_kancpra_Sprawa WHERE kancpra_Prawnik.id_imie_nazwisko=kancpra_Prawnik_kancpra_Sprawa.id_imie_nazwisko and kancpra_Sprawa.id_nazwa_sprawy=kancpra_Prawnik_kancpra_Sprawa.id_nazwa_sprawy";
+      $sql = "SELECT * FROM kancpra_Prawnik,kancpra_Sprawa, kancpra_Prawnik_kancpra_Sprawa where kancpra_Prawnik.id_imie_nazwisko=kancpra_Prawnik_kancpra_Sprawa.id_imie_nazwisko and kancpra_Sprawa.id_nazwa_sprawy=kancpra_Prawnik_kancpra_Sprawa.id_nazwa_sprawy";
       echo("<h3>WYNIK</h3>");
       
       $result = mysqli_query($conn, $sql);
       
       echo('<table border="1">');
-      echo ("<tr><th>PRACOWNICY</th><th>PROJEKTY</th>");
+      echo ("<tr><th>PRAWNICY</th><th>SPRAWY</th>");
       while($row = mysqli_fetch_assoc($result)) {
           echo ('<tr>');
           echo ("<td>".$row['imie_nazwisko']."</td><td>".$row['nazwa_sprawy']."</td>");
