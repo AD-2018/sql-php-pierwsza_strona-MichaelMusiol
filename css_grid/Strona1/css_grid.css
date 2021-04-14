@@ -2,6 +2,16 @@
   margin: 0px;
   padding: 0px;
 }
+.odnosniki {
+  background-color: black;
+  box-shadow: 0 5px 0 red;
+  color: white;
+  margin-top: 30px;
+  padding: 20px 50px;
+  position: absolute;
+  text-decoration: none;
+  text-transform: uppercase;
+}
 .container {
   background-color: rgb(50, 117, 205);
   height: 100vh;

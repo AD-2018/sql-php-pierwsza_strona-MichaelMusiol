@@ -1,0 +1,73 @@
+table {
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: center;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: white;
+}
+
+tr:nth-child(odd) {
+  background-color: red;
+}
+
+th {
+  background-color: black;
+  color: white;
+}
+a {
+  background-color: black;
+  box-shadow: 0 5px 0 red;
+  color: white;
+  margin-top: 5em;
+  padding: 1em 1.5em;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+a:hover {
+  background-color: red;
+}
+
+a:active {
+  box-shadow: none;
+  top: 5px;
+}
+
+body {
+  margin-top: 25px;
+  height: 101vh;
+}
+.calosc {
+  display: flex;
+  flex-wrap: wrap;
+}
+.imie {
+  margin: 10px;
+}
+.red {
+  background-color: red;
+  width: 98%;
+}
+.menu {
+  margin: 10px;
+  text-align: center;
+}
+.blue {
+  background-color: #0080ff;
+  width: 15%;
+}
+.tresc {
+  margin: 10px;
+}
+.green {
+  background-color: rgb(128, 255, 0);
+  width: 80%;
+  margin: 10px;
+}
