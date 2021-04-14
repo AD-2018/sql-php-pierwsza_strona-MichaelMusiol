@@ -8,7 +8,7 @@
   <body>
     <div class="menu blue">
       <br />
-
+      <a href="../index.php">Główna</a><br /><br /><br />
       <a href="Strona1/index.php">Strona1</a><br /><br /><br />
       <a href="Strona2/index.php">Strona2</a><br /><br /><br />
       <a href="Strona3/index.php">Strona3</a><br /><br /><br />
@@ -21,7 +21,6 @@
       <a href="Strona10/index.html">Strona10</a><br /><br /><br />
       <a href="Strona11/index.html">Strona11</a><br /><br /><br />
       <a href="Strona12/index.html">Strona12</a><br /><br /><br />
-      <a href="../index.php">Główna</a><br /><br /><br />
     </div>
   </body>
 </html>
