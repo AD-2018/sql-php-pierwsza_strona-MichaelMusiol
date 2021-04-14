@@ -29,7 +29,7 @@
         <nav>
         <?php
         require_once("../../lib.php");
-      $sql = "SELECT * FROM kancpra_Sprawa";
+      $sql = "SELECT * FROM sysinfRola";
       echo("<h3>ROLA</h3>");
       
       $result = mysqli_query($conn, $sql);
