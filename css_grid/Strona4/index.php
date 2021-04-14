@@ -11,16 +11,16 @@
         <h1><a href="../index.php">Wstecz</a></h1><br/>
             <?php
         require_once("../../lib.php");
-      $sql = "SELECT * FROM kancpra_Prawnik";
-      echo("<h3>PRACOWNICY</h3>");
+      $sql = "SELECT * FROM sysinfOsoba";
+      echo("<h3>OSOBY</h3>");
       
       $result = mysqli_query($conn, $sql);
       
       echo('<table border="1">');
-      echo ("<tr><th>ID</th><th>PRACOWNIK</th>");
+      echo ("<tr><th>ID</th><th>OSOBA</th>");
       while($row = mysqli_fetch_assoc($result)) {
           echo ('<tr>');
-          echo ("<td>".$row['id_imie_nazwisko']."</td><td>".$row['imie_nazwisko']."</td>");
+          echo ("<td>".$row['id_osoba']."</td><td>".$row['osoba']."</td>");
           echo ('</tr>');
       }
       echo ('</table>');
@@ -30,15 +30,15 @@
         <?php
         require_once("../../lib.php");
       $sql = "SELECT * FROM kancpra_Sprawa";
-      echo("<h3>SPRAWY</h3>");
+      echo("<h3>ROLA</h3>");
       
       $result = mysqli_query($conn, $sql);
       
       echo('<table border="1">');
-      echo ("<tr><th>ID</th><th>SPRAWY</th>");
+      echo ("<tr><th>ID</th><th>ROLA</th>");
       while($row = mysqli_fetch_assoc($result)) {
           echo ('<tr>');
-          echo ("<td>".$row['id_nazwa_sprawy']."</td><td>".$row['nazwa_sprawy']."</td>");
+          echo ("<td>".$row['id_rola']."</td><td>".$row['rola']."</td>");
           echo ('</tr>');
       }
       echo ('</table>');
@@ -53,16 +53,16 @@
         <footer>
         <?php
         require_once("../../lib.php");
-      $sql = "SELECT * FROM kancpra_Prawnik,kancpra_Sprawa, kancpra_Prawnik_kancpra_Sprawa where kancpra_Prawnik.id_imie_nazwisko=kancpra_Prawnik_kancpra_Sprawa.id_imie_nazwisko and kancpra_Sprawa.id_nazwa_sprawy=kancpra_Prawnik_kancpra_Sprawa.id_nazwa_sprawy";
+      $sql = "SELECT * FROM sysinfOsoba,sysinfRola,sysinfOsoba_sysinfRola where sysinfOsoba_sysinfRola.id_osoba = sysinfOsoba.id_osoba and sysinfOsoba_sysinfRola.id_rola = sysinfRola.id_rola";
       echo("<h3>WYNIK</h3>");
       
       $result = mysqli_query($conn, $sql);
       
       echo('<table border="1">');
-      echo ("<tr><th>PRAWNICY</th><th>SPRAWY</th>");
+      echo ("<tr><th>PRACOWNICY</th><th>ROLE</th>");
       while($row = mysqli_fetch_assoc($result)) {
           echo ('<tr>');
-          echo ("<td>".$row['imie_nazwisko']."</td><td>".$row['nazwa_sprawy']."</td>");
+          echo ("<td>".$row['osoba']."</td><td>".$row['rola']."</td>");
           echo ('</tr>');
       }
       echo ('</table>');
