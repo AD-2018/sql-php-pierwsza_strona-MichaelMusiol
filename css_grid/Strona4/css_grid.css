@@ -2,6 +2,28 @@
     margin: 0px;
     padding: 0px;
   }
+  table {
+    border-collapse: collapse;
+  }
+  
+  th,
+  td {
+    text-align: center;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: white;
+  }
+  
+  tr:nth-child(odd) {
+    background-color: red;
+  }
+  
+  th {
+    background-color: black;
+    color: white;
+  }
   .container {
     background-color: rgb(50, 117, 205);
     height: 100vh;
