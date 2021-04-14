@@ -28,6 +28,7 @@
         </header>
         <nav>
         2
+        </nav>
         <main>
         <?php
         require_once("../../lib.php");
@@ -45,10 +46,12 @@
       }
       echo ('</table>');
             ?>
-        </nav>
         </main>
-        <aside>
+        <div>
             3
+        </div>
+        <aside>
+            4
         </aside>
         <footer>
         <?php
