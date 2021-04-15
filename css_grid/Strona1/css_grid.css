@@ -25,48 +25,6 @@ th {
   color: white;
 }
 
-body {
-  margin-top: 25px;
-  height: 101vh;
-}
-.calosc {
-  display: flex;
-  flex-wrap: wrap;
-}
-.imie {
-  margin: 10px;
-}
-.red {
-  background-color: red;
-  width: 98%;
-}
-.menu {
-  margin: 10px;
-  text-align: center;
-}
-.blue {
-  background-color: #0080ff;
-  width: 15%;
-}
-.tresc {
-  margin: 10px;
-}
-.green {
-  background-color: rgb(128, 255, 0);
-  width: 80%;
-  margin: 10px;
-}
-
-.odnosniki {
-  background-color: black;
-  box-shadow: 0 5px 0 red;
-  color: white;
-  margin-top: 30px;
-  padding: 20px 50px;
-  position: absolute;
-  text-decoration: none;
-  text-transform: uppercase;
-}
 .container {
   background-color: rgb(50, 117, 205);
   height: 100vh;
