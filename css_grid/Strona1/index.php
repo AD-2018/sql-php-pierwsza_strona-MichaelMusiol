@@ -8,7 +8,7 @@
 <body>
     <div class="container">
         <header>
-        <h1><a href="../index.php">Wstecz</a></h1><br/>
+<a href="../index.php">Wstecz</a><br/>
             <?php
         require_once("../../lib.php");
       $sql = "SELECT * FROM firmaPracownik";
