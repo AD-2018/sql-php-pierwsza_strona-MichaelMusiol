@@ -71,3 +71,7 @@ body {
   width: 80%;
   margin: 10px;
 }
+ul {
+  list-style-type: none;
+  margin-top: auto;
+}
