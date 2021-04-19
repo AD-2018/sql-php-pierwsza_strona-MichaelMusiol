@@ -72,11 +72,12 @@ body {
 }
 ul {
   list-style-type: none;
-  margin: 10px 0px 0px 0px;
+  margin: 0px;
   padding: 0px;
 }
 
 li a {
   display: block;
   text-decoration: none;
+  margin: 10px 0px 0px 0px;
 }
