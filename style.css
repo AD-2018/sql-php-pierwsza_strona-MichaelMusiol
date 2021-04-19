@@ -74,7 +74,7 @@ ul {
   list-style-type: none;
   margin: 0px;
   padding: 0px;
-  width: 200px;
+  width: 100%;
 }
 
 li a {
