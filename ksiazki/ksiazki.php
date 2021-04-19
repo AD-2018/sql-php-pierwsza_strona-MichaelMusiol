@@ -12,7 +12,6 @@
     </div>
     </div>
     <div class="menu blue">
-        <br/>
         <?php include_once("../pracownicy/menu.html"); ?>
     </div>
     <div class="tresc green">
