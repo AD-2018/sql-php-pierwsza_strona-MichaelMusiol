@@ -73,5 +73,13 @@ body {
 }
 ul {
   list-style-type: none;
-  margin-top: auto;
+  margin: 0px;
+  padding: 0px;
+  width: 200px;
+}
+
+li a {
+  display: block;
+  padding: 8px 16px;
+  text-decoration: none;
 }
