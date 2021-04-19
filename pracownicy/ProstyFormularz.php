@@ -12,15 +12,7 @@
     </div>
     </div>
     <div class="menu blue">
-        <br/>
-    <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-MichaelMusiol">Github</a><br/><br/><br/>
-    <a href="../index.php">Pracownicy</a><br/><br/><br/>
-    <a href="../pracownicy/Pracownicyorganizacja.php">Organizacja</a><br/><br/><br/>
-    <a href="../pracownicy/funkcjeAgregujace.php">Funkcje</a><br/><br/><br/>
-    <a href="../pracownicy/DataiCzas.php">Data i Czas</a><br/><br/><br/>
-    <a href="../pracownicy/ProstyFormularz.php">Formularz</a><br/><br/><br/>
-    <a href="../pracownicy/daneDoBazy.php">Dane Do Bazy</a> <br/><br/><br/>
-    <a href="../ksiazki/ksiazki.php">Książki</a><br/><br/><br/>
+    <?php include_once("menu.html"); ?>
     </div>
     <div class="tresc green">
 <form action="strona.php" method="POST">
