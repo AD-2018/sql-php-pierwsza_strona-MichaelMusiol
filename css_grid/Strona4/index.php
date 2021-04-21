@@ -42,17 +42,31 @@
       $result = mysqli_query($conn, $sql);
       
       echo('<table border="1">');
-      echo ("<tr><th>ID</th><th>ROLA</th>");
+      echo ("<tr><th>ID</th><th>ROLA</th><th>USUŃ</th>");
       while($row = mysqli_fetch_assoc($result)) {
           echo ('<tr>');
-          echo ("<td>".$row['id_rola']."</td><td>".$row['rola']."</td>");
+          echo ("<td>".$row['id_rola']."</td><td>".$row['rola']."</td><td>".'
+          <form action="delTabela2.php" method="POST">
+          <input type="number" name="id_rola" value="'.$row['id_rola'].'" hidden>
+          <input type="submit" value="X">
+        </form>'."</td>");
           echo ('</tr>');
       }
       echo ('</table>');
             ?>
         </main>
         <aside>
-            3
+        <h3>USUŃ PRACOWNIKA</h3>
+            <p>tabela</p>
+    <select>
+     <option value="firmaPracownik">Prawnicy</option>
+     <option value="firmaProjekt">Sprawy</option>
+     <option value="firmaPracownik_firmaProjekt">Wynik</option><br/>
+    </select>
+	<form action="delTabela1.php" method="POST">
+   	<label>pracownik</label><input type="number" name="id_pracownik" required></br>
+    <input type="submit" value="Usuń pracownika">
+	</form>
         </aside>
         <footer>
         <?php
@@ -63,10 +77,14 @@
       $result = mysqli_query($conn, $sql);
       
       echo('<table border="1">');
-      echo ("<tr><th>PRACOWNICY</th><th>ROLE</th>");
+      echo ("<tr><th>PRACOWNICY</th><th>ROLE</th><th>USUŃ</th>");
       while($row = mysqli_fetch_assoc($result)) {
           echo ('<tr>');
-          echo ("<td>".$row['osoba']."</td><td>".$row['rola']."</td>");
+          echo ("<td>".$row['osoba']."</td><td>".$row['rola']."</td><td>".'
+          <form action="delWynik.php" method="POST">
+          <input type="number" name="id" value="'.$row['id'].'" hidden>
+          <input type="submit" value="X">
+        </form>'."</td>");
           echo ('</tr>');
       }
       echo ('</table>');

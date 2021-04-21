@@ -10,7 +10,7 @@ require_once("../../lib.php");
 echo("jestes w delTabela2.php <br/>");
 
 require_once("../../lib.php");
-$sql = "DELETE FROM firmaProjekt WHERE id_projekt=".$_POST['id'];
+$sql = "DELETE FROM sysinfRola WHERE id_rola=".$_POST['id_rola'];
 echo $sql;
 if ($conn->query($sql) === TRUE) {
   echo "Record deleted successfully";
