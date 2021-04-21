@@ -17,10 +17,14 @@
       $result = mysqli_query($conn, $sql);
       
       echo('<table border="1">');
-      echo ("<tr><th>ID</th><th>PRACOWNIK</th>");
+      echo ("<tr><th>ID</th><th>PRACOWNIK</th><th>Usuń</th>");
       while($row = mysqli_fetch_assoc($result)) {
           echo ('<tr>');
-          echo ("<td>".$row['id_pracownik']."</td><td>".$row['pracownik']."</td>");
+          echo ("<td>".$row['id_pracownik']."</td><td>".$row['pracownik']."
+            <form action="delete.php" method="POST">
+            <input type="number" name="id_pracownik" value="'.$row['id_pracownik'].'" hidden>
+            <input type="submit" value="X">
+          </form>"."</td>");
           echo ('</tr>');
       }
       echo ('</table>');
@@ -35,7 +39,7 @@
       $result = mysqli_query($conn, $sql);
       
       echo('<table border="1">');
-      echo ("<tr><th>ID</th><th>PROJEKT</th>");
+      echo ("<tr><th>ID</th><th>PROJEKT</th><th>Usuń</th>");
       while($row = mysqli_fetch_assoc($result)) {
           echo ('<tr>');
           echo ("<td>".$row['id_projekt']."</td><td>".$row['projekt']."</td>");
@@ -45,7 +49,18 @@
             ?>
         </nav>
         <main>
-            2
+            <h3>USUŃ PRACOWNIKA</h3>
+            <p>tabela</p>
+    <select>
+     <option value="firmaPracownik">Pracownik</option>
+     <option value="firmaProjekt">Projekt</option>
+     <option value="firmaPracownik_firmaProjekt">Wynik</option><br/>
+    </select>
+	<form action="delete.php" method="POST">
+   	<label> pracownik</label><input type="number" name="id" required></br>
+    <input type="submit" value="Usuń pracownika">
+	</form>
+    
         </main>
         <aside>
             3
@@ -59,7 +74,7 @@
       $result = mysqli_query($conn, $sql);
       
       echo('<table border="1">');
-      echo ("<tr><th>PRACOWNICY</th><th>PROJEKTY</th>");
+      echo ("<tr><th>PRACOWNICY</th><th>PROJEKTY</th><th>USUŃ</th>");
       while($row = mysqli_fetch_assoc($result)) {
           echo ('<tr>');
           echo ("<td>".$row['pracownik']."</td><td>".$row['projekt']."</td>");
