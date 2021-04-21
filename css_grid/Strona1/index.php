@@ -20,7 +20,7 @@
       echo ("<tr><th>ID</th><th>PRACOWNIK</th><th>Usuń</th>");
       while($row = mysqli_fetch_assoc($result)) {
           echo ('<tr>');
-          echo ("<td>".$row['id_pracownik']."</td><td>".$row['pracownik'].'
+          echo ("<td>".$row['id_pracownik']."</td><td>".$row['pracownik']."</td><td>".'
             <form action="delete.php" method="POST">
             <input type="number" name="id_pracownik" value="'.$row['id_pracownik'].'" hidden>
             <input type="submit" value="X">
