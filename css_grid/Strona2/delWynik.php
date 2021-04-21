@@ -9,7 +9,7 @@
 require_once("../../lib.php");
 echo("jestes w delWynik.php <br/>");
 
-$sql = "DELETE FROM firmaPracownik_firmaProjekt WHERE id=".$_POST['id'];
+$sql = "DELETE FROM kancpra_Prawnik_kancpra_Sprawa WHERE id=".$_POST['id'];
 echo $sql;
 if ($conn->query($sql) === TRUE) {
   echo "Record deleted successfully";
