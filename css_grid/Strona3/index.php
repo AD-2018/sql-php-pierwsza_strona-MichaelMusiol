@@ -70,7 +70,11 @@
       echo ("<tr><th>PRAWNICY</th><th>SPRAWY</th>");
       while($row = mysqli_fetch_assoc($result)) {
           echo ('<tr>');
-          echo ("<td>".$row['nazwa']."</td><td>".$row['artykul']."</td>");
+          echo ("<td>".$row['nazwa']."</td><td>".$row['artykul']."</td><td>".'
+          <form action="delWynik.php" method="POST">
+          <input type="number" name="id" value="'.$row['id'].'" hidden>
+          <input type="submit" value="X">
+        </form>'."</td>");
           echo ('</tr>');
       }
       echo ('</table>');
