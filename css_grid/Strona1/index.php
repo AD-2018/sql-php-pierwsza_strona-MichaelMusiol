@@ -56,8 +56,8 @@
      <option value="firmaProjekt">Projekt</option>
      <option value="firmaPracownik_firmaProjekt">Wynik</option><br/>
     </select>
-	<form action="delete.php" method="POST">
-   	<label> pracownik</label><input type="number" name="id" required></br>
+	<form action="delTabela1.php" method="POST">
+   	<label> pracownik</label><input type="number" name="id_pracownik" required></br>
     <input type="submit" value="Usuń pracownika">
 	</form>
     
