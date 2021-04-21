@@ -75,7 +75,7 @@
           echo ('<tr>');
           echo ("<td>".$row['imie_nazwisko']."</td><td>".$row['nazwa_sprawy']."</td><td>".'
           <form action="delWynik.php" method="POST">
-          <input type="number" name="id_pracownik" value="'.$row['id'].'" hidden>
+          <input type="number" name="id" value="'.$row['id'].'" hidden>
           <input type="submit" value="X">
         </form>'."</td>");
           echo ('</tr>');
