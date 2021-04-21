@@ -42,10 +42,14 @@
       $result = mysqli_query($conn, $sql);
       
       echo('<table border="1">');
-      echo ("<tr><th>ID</th><th>artykuły</th>");
+      echo ("<tr><th>ID</th><th>artykuły</th><th>Usuń</th>");
       while($row = mysqli_fetch_assoc($result)) {
           echo ('<tr>');
-          echo ("<td>".$row['id_artykul']."</td><td>".$row['artykul']."</td>");
+          echo ("<td>".$row['id_artykul']."</td><td>".$row['artykul']."</td><td>".'
+          <form action="delTabela2.php" method="POST">
+          <input type="number" name="id_artykul" value="'.$row['id_artykul'].'" hidden>
+          <input type="submit" value="X">
+        </form>'."</td>");
           echo ('</tr>');
       }
       echo ('</table>');
