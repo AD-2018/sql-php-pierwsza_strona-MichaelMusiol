@@ -42,7 +42,7 @@
       echo ("<tr><th>ID</th><th>PROJEKT</th><th>Usuń</th>");
       while($row = mysqli_fetch_assoc($result)) {
           echo ('<tr>');
-          echo ("<td>".$row['id_projekt']."</td><td>".$row['projekt']."</td><td>"."</td><td>".'
+          echo ("<td>".$row['id_projekt']."</td><.>".$row['projekt']."</td><td>".'
           <form action="delTabela2.php" method="POST">
           <input type="number" name="id_projekt" value="'.$row['id_projekt'].'" hidden>
           <input type="submit" value="X">
@@ -81,7 +81,7 @@
       echo ("<tr><th>PRACOWNICY</th><th>PROJEKTY</th><th>USUŃ</th>");
       while($row = mysqli_fetch_assoc($result)) {
           echo ('<tr>');
-          echo ("<td>".$row['pracownik']."</td><td>".$row['projekt']."</td><td>"."</td><td>".'
+          echo ("<td>".$row['pracownik']."</td><td>".$row['projekt']."</td><td>".'
           <form action="delWynik.php" method="POST">
           <input type="number" name="id" value="'.$row['id'].'" hidden>
           <input type="submit" value="X">
