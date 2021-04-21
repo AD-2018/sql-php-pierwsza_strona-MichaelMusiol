@@ -13,7 +13,7 @@ $sql = "DELETE FROM firmaPracownik WHERE id_pracownik=".$_POST['id_pracownik'];
 echo $sql;
 if ($conn->query($sql) === TRUE) {
   echo "Record deleted successfully";
-  header('Location: https://php-michael-projekt1.herokuapp.com/css_grid/Strona1/index.php');
+  header('Location: https://php-michael-projekt1.herokuapp.com/css_grid/Strona3/index.php');
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }

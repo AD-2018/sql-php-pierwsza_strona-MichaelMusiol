@@ -73,7 +73,7 @@
       echo ("<tr><th>PRAWNICY</th><th>SPRAWY</th><th>USUŃ</th>");
       while($row = mysqli_fetch_assoc($result)) {
           echo ('<tr>');
-          echo ("<td>".$row['id']."</td><td>".$row['imie_nazwisko']."</td><td>".$row['nazwa_sprawy']."</td><td>".'
+          echo ("<td>".$row['imie_nazwisko']."</td><td>".$row['nazwa_sprawy']."</td><td>".'
           <form action="delTabela1.php" method="POST">
           <input type="number" name="id_pracownik" value="'.$row['id'].'" hidden>
           <input type="submit" value="X">

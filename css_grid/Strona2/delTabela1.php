@@ -12,7 +12,7 @@ $sql = "DELETE FROM kancpra_Prawnik WHERE id_imie_nazwisko=".$_POST['id_pracowni
 echo $sql;
 if ($conn->query($sql) === TRUE) {
   echo "Record deleted successfully";
-  header('Location: https://php-michael-projekt1.herokuapp.com/css_grid/Strona1/index.php');
+  header('Location: https://php-michael-projekt1.herokuapp.com/css_grid/Strona2/index.php');
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }

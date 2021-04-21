@@ -14,7 +14,7 @@ $sql = "DELETE FROM firmaProjekt WHERE id_projekt=".$_POST['id'];
 echo $sql;
 if ($conn->query($sql) === TRUE) {
   echo "Record deleted successfully";
-  header('Location: https://php-michael-projekt1.herokuapp.com/css_grid/Strona1/index.php');
+  header('Location: https://php-michael-projekt1.herokuapp.com/css_grid/Strona4/index.php');
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }

@@ -8,12 +8,11 @@
 <?php
 require_once("../../lib.php");
 echo("jestes w delTabela2.php <br/>");
-
 $sql = "DELETE FROM kancpra_Sprawa WHERE id_nazwa_sprawy=".$_POST['id_pracownik'];
 echo $sql;
 if ($conn->query($sql) === TRUE) {
   echo "Record deleted successfully";
-  header('Location: https://php-michael-projekt1.herokuapp.com/css_grid/Strona1/index.php');
+  header('Location: https://php-michael-projekt1.herokuapp.com/css_grid/Strona2/index.php');
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
