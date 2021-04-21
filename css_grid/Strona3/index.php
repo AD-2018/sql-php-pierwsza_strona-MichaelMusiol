@@ -67,7 +67,7 @@
       $result = mysqli_query($conn, $sql);
       
       echo('<table border="1">');
-      echo ("<tr><th>PRAWNICY</th><th>SPRAWY</th>");
+      echo ("<tr><th>PRAWNICY</th><th>SPRAWY</th><th>USUŃ</th>");
       while($row = mysqli_fetch_assoc($result)) {
           echo ('<tr>');
           echo ("<td>".$row['nazwa']."</td><td>".$row['artykul']."</td><td>".'

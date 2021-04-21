@@ -17,10 +17,14 @@
       $result = mysqli_query($conn, $sql);
       
       echo('<table border="1">');
-      echo ("<tr><th>ID</th><th>OSOBA</th>");
+      echo ("<tr><th>ID</th><th>OSOBA</th><th>USUŃ</th>");
       while($row = mysqli_fetch_assoc($result)) {
           echo ('<tr>');
-          echo ("<td>".$row['id_osoba']."</td><td>".$row['osoba']."</td>");
+          echo ("<td>".$row['id_osoba']."</td><td>".$row['osoba']."</td><td>".'
+          <form action="delTabela1.php" method="POST">
+          <input type="number" name="id_osoba" value="'.$row['id_osoba'].'" hidden>
+          <input type="submit" value="X">
+        </form>'."</td>");
           echo ('</tr>');
       }
       echo ('</table>');
