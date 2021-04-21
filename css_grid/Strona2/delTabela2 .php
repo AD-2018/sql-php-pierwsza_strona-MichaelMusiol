@@ -8,7 +8,7 @@
 <?php
 require_once("../../lib.php");
 echo("jestes w delTabela2.php <br/>");
-$sql = "DELETE FROM kancpra_Sprawa WHERE id_nazwa_sprawy=".$_POST['id_sprawy'];
+$sql = "DELETE FROM kancpra_Sprawa WHERE id_nazwa_sprawy=".$_POST['id_nazwa_sprawy'];
 echo $sql;
 if ($conn->query($sql) === TRUE) {
   echo "Record deleted successfully";
