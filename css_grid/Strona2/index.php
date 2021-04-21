@@ -22,7 +22,7 @@
           echo ('<tr>');
           echo ("<td>".$row['id_imie_nazwisko']."</td><td>".$row['imie_nazwisko']."</td><td>".'
           <form action="delTabela1.php" method="POST">
-          <input type="number" name="id_imie_nazwisko" value="'.$row['id_imie_nazwisko'].'" hidden>
+          <input type="number" name="id_pracownik" value="'.$row['id_imie_nazwisko'].'" hidden>
           <input type="submit" value="X">
           </form>'."</td>");
           echo ('</tr>');
@@ -46,7 +46,7 @@
       while($row = mysqli_fetch_assoc($result)) {
           echo ('<tr>');
           echo ("<td>".$row['id_nazwa_sprawy']."</td><td>".$row['nazwa_sprawy']."</td><td>".'
-          <form action="delTabela1.php" method="POST">
+          <form action="delTabela2.php" method="POST">
           <input type="number" name="id_nazwa_sprawy" value="'.$row['id_nazwa_sprawy'].'" hidden>
           <input type="submit" value="X">
         </form>'."</td>");
@@ -74,8 +74,8 @@
       while($row = mysqli_fetch_assoc($result)) {
           echo ('<tr>');
           echo ("<td>".$row['imie_nazwisko']."</td><td>".$row['nazwa_sprawy']."</td><td>".'
-          <form action="delTabela1.php" method="POST">
-          <input type="number" name="id" value="'.$row['id'].'" hidden>
+          <form action="delWynik.php" method="POST">
+          <input type="number" name="id_pracownik" value="'.$row['id'].'" hidden>
           <input type="submit" value="X">
         </form>'."</td>");
           echo ('</tr>');
