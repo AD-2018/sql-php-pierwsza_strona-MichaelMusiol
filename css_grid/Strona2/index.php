@@ -47,7 +47,7 @@
           echo ('<tr>');
           echo ("<td>".$row['id_nazwa_sprawy']."</td><td>".$row['nazwa_sprawy']."</td><td>".'
           <form action="delTabela1.php" method="POST">
-          <input type="number" name="id_pracownik" value="'.$row['id_nazwa_sprawy'].'" hidden>
+          <input type="number" name="id_sprawy" value="'.$row['id_nazwa_sprawy'].'" hidden>
           <input type="submit" value="X">
         </form>'."</td>");
           echo ('</tr>');
