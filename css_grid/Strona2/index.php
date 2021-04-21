@@ -17,10 +17,14 @@
       $result = mysqli_query($conn, $sql);
       
       echo('<table border="1">');
-      echo ("<tr><th>ID</th><th>PRACOWNIK</th>");
+      echo ("<tr><th>ID</th><th>PRACOWNIK</th><th>USUŃ</th>");
       while($row = mysqli_fetch_assoc($result)) {
           echo ('<tr>');
-          echo ("<td>".$row['id_imie_nazwisko']."</td><td>".$row['imie_nazwisko']."</td>");
+          echo ("<td>".$row['id_imie_nazwisko']."</td><td>".$row['imie_nazwisko']."</td><td>".'
+          <form action="delTabela1.php" method="POST">
+          <input type="number" name="id_pracownik" value="'.$row['id_imie_nazwisko'].'" hidden>
+          <input type="submit" value="X">
+          </form>'."</td>");
           echo ('</tr>');
       }
       echo ('</table>');
@@ -38,10 +42,14 @@
       $result = mysqli_query($conn, $sql);
       
       echo('<table border="1">');
-      echo ("<tr><th>ID</th><th>SPRAWY</th>");
+      echo ("<tr><th>ID</th><th>SPRAWY</th><th>USUŃ</th>");
       while($row = mysqli_fetch_assoc($result)) {
           echo ('<tr>');
-          echo ("<td>".$row['id_nazwa_sprawy']."</td><td>".$row['nazwa_sprawy']."</td>");
+          echo ("<td>".$row['id_nazwa_sprawy']."</td><td>".$row['nazwa_sprawy']."</td><td>".'
+          <form action="delTabela1.php" method="POST">
+          <input type="number" name="id_pracownik" value="'.$row['id_nazwa_sprawy'].'" hidden>
+          <input type="submit" value="X">
+        </form>'."</td>");
           echo ('</tr>');
       }
       echo ('</table>');
@@ -62,10 +70,14 @@
       $result = mysqli_query($conn, $sql);
       
       echo('<table border="1">');
-      echo ("<tr><th>PRAWNICY</th><th>SPRAWY</th>");
+      echo ("<tr><th>PRAWNICY</th><th>SPRAWY</th><th>USUŃ</th>");
       while($row = mysqli_fetch_assoc($result)) {
           echo ('<tr>');
-          echo ("<td>".$row['imie_nazwisko']."</td><td>".$row['nazwa_sprawy']."</td>");
+          echo ("<td>".$row['id']."</td><td>".$row['imie_nazwisko']."</td><td>".$row['nazwa_sprawy']."</td><td>".'
+          <form action="delTabela1.php" method="POST">
+          <input type="number" name="id_pracownik" value="'.$row['id'].'" hidden>
+          <input type="submit" value="X">
+        </form>'."</td>");
           echo ('</tr>');
       }
       echo ('</table>');

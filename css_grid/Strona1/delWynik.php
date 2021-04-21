@@ -8,8 +8,6 @@
 <?php
 require_once("../../lib.php");
 echo("jestes w delWynik.php <br/>");
-
-require_once("../../lib.php");
 $sql = "DELETE FROM firmaPracownik_firmaProjekt WHERE id=".$_POST['id'];
 echo $sql;
 if ($conn->query($sql) === TRUE) {
