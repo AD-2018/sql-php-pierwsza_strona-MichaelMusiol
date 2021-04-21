@@ -8,7 +8,6 @@
 <?php
 require_once("../../lib.php");
 echo("jestes w delTabela2.php <br/>");
-echo(.$_POST['id_projekt']);
 $sql = "DELETE FROM firmaProjekt WHERE id_projekt=".$_POST['id_projekt'];
 echo $sql;
 if ($conn->query($sql) === TRUE) {
