@@ -59,8 +59,8 @@
         <h3>USUŃ PRACOWNIKA</h3>
             <p>tabela</p>
     <select>
-     <option value="firmaPracownik">Prawnicy</option>
-     <option value="firmaProjekt">Sprawy</option>
+     <option value="firmaPracownik">Producenci</option>
+     <option value="firmaProjekt">Artykuły</option>
      <option value="firmaPracownik_firmaProjekt">Wynik</option><br/>
     </select>
 	<form action="delTabela1.php" method="POST">
